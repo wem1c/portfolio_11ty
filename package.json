@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpx @11ty/eleventy",
+    "dev": "pnpx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "eleventy-plugin-i18n": "^0.1.3"
+  }
+}
