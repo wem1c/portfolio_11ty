@@ -12,4 +12,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts_cnr", function (collection) {
     return collection.getFilteredByGlob("./_site/cnr/posts/*.md");
   });
+
+  return {
+    dir: { input: "src" },
+  };
 };
