@@ -1,11 +1,13 @@
 ---
-permalink: "/{{ locale }}/index.html"
+permalink: /{{ locale }}/index.html
 ---
 
-{% extends "layouts/base.njk" %}
-{% set metaTitle = site[locale].metaTitle %}
+{# Metadata #}
 {% set metaDescription = site[locale].metaDescription %}
 {% set metaImage = site[locale].metaImage %}
+{% set metaTitle = site[locale].metaTitle %}
+{# Layout #}
+{% extends "layouts/base.njk" %}
 {% block content %}
-    {# page content #}
-{% endblock %}
+    {% include "pages/index.njk" %}
+{% endblock content %}
