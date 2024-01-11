@@ -9,7 +9,8 @@
 
         {# TODO: add favicons meta #}
         <link rel="icon" href="/images/favicon.svg" />
-        <link rel="stylesheet" href="/css/main.min.css" />
+
+        <link rel="stylesheet" href="/bundle.css" />
 
         {# Add facility for pages to declare an array of stylesheet paths #}
         {% if pageStylesheets %}
@@ -22,6 +23,8 @@
         {% endif %}
     </head>
     <body>
+
+
         {% include "partials/header.njk" %}
         {% block content %}
         {% endblock content %}
