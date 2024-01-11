@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
     let result = "";
 
     for (const file of files) {
-      result += `{% include "${file}" %}\n`;
+      result += fs.readFileSync(file, "utf8");
     }
 
     return result;
