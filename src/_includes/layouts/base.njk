@@ -4,22 +4,22 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>{{ metaTitle }}</title>
-        <meta name="description" content="{{ metaDescription }}" />
+
+        {% include "partials/meta.njk" %}
+
+        {# TODO: add favicons meta #}
+        <link rel="icon" href="/images/favicon.svg" />
         <link rel="stylesheet" href="/css/main.min.css" />
-        <!-- open graph -->
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="{{ metaTitle }}" />
-        <meta property="og:image" content="{{ metaImage }}" />
-        <meta property="og:site_name" content="{{ site.name }}" />
-        <meta property="og:description" content="{{ metaDescription }}" />
-        {# TODO: declare no support for X #}
-        <!-- twitter -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="{{ site.twitter }}" />
-        <meta name="twitter:title" content="{{ metaTitle }}" />
-        <meta name="twitter:description" content="{{ metaDescription }}" />
-        <meta name="twitter:image" content="{{ metaImage }}" />
+
+        {# Add facility for pages to declare an array of stylesheet paths #}
+        {% if pageStylesheets %}
+            {% for item in pageStylesheets %}
+                <link rel="stylesheet"
+                      media="print"
+                      href="{{ item }}?{{ assetHash }}"
+                      onload="this.media='all'" />
+            {% endfor %}
+        {% endif %}
     </head>
     <body>
         {# {% include "partials/header.njk" %} #}
