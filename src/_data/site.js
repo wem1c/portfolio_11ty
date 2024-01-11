@@ -9,6 +9,6 @@ module.exports = {
   },
   cnr: {
     metaTitle: "Conorov Portfolio",
-    metaDescription: "Samo portfolio vašeg prijateljskog komšije programera!",
+    metaDescription: "Portfolio vašeg prijateljskog komšije programera!",
   },
 };
