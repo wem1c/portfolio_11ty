@@ -1,6 +1,6 @@
 module.exports = {
   buildTime: new Date(),
-  baseUrl: "https://www.conor.zone",
+  url: "https://www.conor.zone",
   name: "Conor's Portfolio",
   mastodon: "@wem1c@social.linux.pizza",
   en: {
