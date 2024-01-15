@@ -3,7 +3,7 @@ permalink: bundle.css
 ---
 
 {% setAsync "css" %}
-{% includeAll "src/_includes/css/*.css" %}
+{% includeAll "src/_includes/css/**/*.css" %}
 {% endsetAsync %}
 
 {{ css | cssmin | safe }}
