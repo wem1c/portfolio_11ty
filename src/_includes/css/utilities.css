@@ -1,0 +1,12 @@
+.space_between {
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: var(--step-3);
+  font-weight: 700;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+}
