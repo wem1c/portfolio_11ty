@@ -40,4 +40,10 @@
 
   /* Custom pairs */
   --space-s-l: clamp(1rem, 0.6rem + 2vw, 3rem);
+
+  /**
+  * Colors
+  */
+  --color-primary: #fdf6e3;
+  --color-secondary: #166534;
 }
