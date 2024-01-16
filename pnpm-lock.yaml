@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@11ty/is-land':
+    specifier: ^4.0.0
+    version: 4.0.0
   clean-css:
     specifier: ^5.3.3
     version: 5.3.3
@@ -103,6 +106,10 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+
+  /@11ty/is-land@4.0.0:
+    resolution: {integrity: sha512-RxbjF2+FzSu3rerHrWLRsvsPX2YM47RwXpdWCCzLhwRSsz5sJe9TnK7mphEld1gZnp2GeD5ByvhqjIc4CqidsQ==}
+    dev: false
 
   /@11ty/lodash-custom@4.17.21:
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}

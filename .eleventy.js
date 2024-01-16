@@ -49,6 +49,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/reset.css");
   eleventyConfig.addPassthroughCopy("./src/assets/css/global.css");
 
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@11ty/is-land/is-land.js": "/assets/js/is-land.js",
+  });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@11ty/is-land/is-land-autoinit.js":
+      "/assets/js/is-land-autoinit.js",
+  });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
 
   //eleventyConfig.addPassthroughCopy("./src/images");
