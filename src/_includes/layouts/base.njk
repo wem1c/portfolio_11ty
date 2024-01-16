@@ -14,12 +14,19 @@
         <link rel="stylesheet" href="/assets/css/global.css" />
         <link rel="stylesheet" href="/assets/css/bundle.min.css" />
     </head>
+
     <body>
         {% include "partials/header.njk" %}
         {% block content %}
         {% endblock content %}
         {% include "partials/footer.njk" %}
-        <snow-fall></snow-fall>
+        <is-land on:media="(prefers-reduced-motion: no-preference)">
+        <snow-fall mode="page"></snow-fall>
+        </is-land>
     </body>
+
+    <script type="module" src="/assets/js/is-land.js"></script>
     <script type="module" src="/assets/js/snow-fall.js"></script>
+
+    {% if components %}<script type="module" src="/assets/js/{{components}}.js"></script>{% endif %}
 </html>
