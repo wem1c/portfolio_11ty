@@ -46,6 +46,9 @@
   */
   --color-primary: #fdf6e3;
   --color-secondary: #166534;
+
+  /* snow-fall color */
+  --snow-fall-color: #abf0ff;
 }
 
 body {
