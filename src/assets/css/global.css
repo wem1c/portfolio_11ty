@@ -47,3 +47,9 @@
   --color-primary: #fdf6e3;
   --color-secondary: #166534;
 }
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: var(--step-0);
+  background-color: var(--color-primary);
+}

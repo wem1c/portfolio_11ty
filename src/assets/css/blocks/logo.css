@@ -1,7 +1,3 @@
-.space_between {
-  justify-content: space-between;
-}
-
 .logo {
   text-decoration: none;
   color: var(--color-secondary);

@@ -10,17 +10,9 @@
         {# TODO: add favicons meta #}
         <link rel="icon" href="/images/favicon.svg" />
 
-        <link rel="stylesheet" href="/bundle.css" />
-
-        {# Add facility for pages to declare an array of stylesheet paths #}
-        {% if pageStylesheets %}
-            {% for item in pageStylesheets %}
-                <link rel="stylesheet"
-                      media="print"
-                      href="{{ item }}?{{ assetHash }}"
-                      onload="this.media='all'" />
-            {% endfor %}
-        {% endif %}
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/global.css" />
+        <link rel="stylesheet" href="/assets/css/bundle.min.css" />
     </head>
     <body>
         {% include "partials/header.njk" %}

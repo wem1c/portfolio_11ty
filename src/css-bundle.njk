@@ -1,9 +1,11 @@
 ---
-permalink: bundle.css
+permalink: /assets/css/bundle.min.css
 ---
 
 {% setAsync "css" %}
-{% includeAll "src/_includes/css/**/*.css" %}
+{% include "src/assets/css/utilities.css" %}
+{% includeAll "src/assets/css/blocks/*.css" %}
+{% includeAll "src/assets/css/layouts/*.css" %}
 {% endsetAsync %}
 
 {{ css | cssmin | safe }}

@@ -2,7 +2,6 @@ const CleanCSS = require("clean-css");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const fastGlob = require("fast-glob");
 const fs = require("fs");
-const nunjucks = require("nunjucks"); // Add this line
 
 module.exports = function (eleventyConfig) {
   /**
@@ -47,13 +46,15 @@ module.exports = function (eleventyConfig) {
   /**
    * PASSTHROUGH COPIES
    */
-  //eleventyConfig.addPassthroughCopy("./src/fonts");
+  eleventyConfig.addPassthroughCopy("./src/assets/css/reset.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/css/global.css");
+
   //eleventyConfig.addPassthroughCopy("./src/images");
 
   return {
-    dir: { input: "src" },
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
+    dir: { input: "src" },
   };
 };
