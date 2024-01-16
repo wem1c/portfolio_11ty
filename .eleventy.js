@@ -49,6 +49,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/reset.css");
   eleventyConfig.addPassthroughCopy("./src/assets/css/global.css");
 
+  eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
+
   //eleventyConfig.addPassthroughCopy("./src/images");
 
   return {
