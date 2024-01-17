@@ -10,6 +10,18 @@
   font-weight: 500;
 }
 
+.list-style-type-none {
+  list-style-type: none;
+}
+
+.margin-block-start-0 {
+  margin-block-start: 0 !important;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
 .space_between {
   justify-content: space-between;
 }
