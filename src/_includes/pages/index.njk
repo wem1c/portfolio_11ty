@@ -5,7 +5,7 @@ components: split-flap
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <main>
+    <main id="hero">
         <h1>Hello there! 👋</h1>
         <h1>
             I'm <span class="color-secondary">Conor C.,</span>
@@ -15,9 +15,11 @@ components: split-flap
         </h2>
     </main>
 
-    <section id="projects" class="box">
-        <h1>Projects</h1>
-        <ul>
+    <section id="projects" class="box invert rounded">
+        <h2>Projects</h2>
+        <ul id="project-list"
+            class="cluster list-style-type-none"
+            data-justify="start">
             <li>Project</li>
             <li>Project</li>
             <li>Project</li>

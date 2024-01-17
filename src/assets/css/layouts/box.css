@@ -6,8 +6,8 @@
   outline: var(--border-thin) transparent;
   outline-offset: calc(var(--border-thin) * -1);
 
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
 .box * {
@@ -15,6 +15,6 @@
 }
 
 .box.invert {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
