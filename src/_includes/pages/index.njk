@@ -1,7 +1,27 @@
+---
+components: split-flap
+---
+
 {% extends "layouts/base.njk" %}
 
 {% block content %}
     <main>
-        <h1>Hello, world!</h1>
+        <h1>Hello there! 👋</h1>
+        <h1>
+            I'm <span class="color-secondary">Conor C.,</span>
+        </h1>
+        <h2 class="font-semi">
+            Your friendly neighborhood <split-flap-display data-words="programmer, developer, engineer, nerd">programmer</split-flap-display>
+        </h2>
     </main>
+
+    <section id="projects" class="box">
+        <h1>Projects</h1>
+        <ul>
+            <li>Project</li>
+            <li>Project</li>
+            <li>Project</li>
+            <li>Project</li>
+        </ul>
+    </section>
 {% endblock content %}
