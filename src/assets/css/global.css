@@ -47,8 +47,14 @@
   --color-primary: #fdf6e3;
   --color-secondary: #166534;
 
-  /* snow-fall color */
+  /**
+  * Borders
+  */
+  --border-thin: 0.0625rem;
+
+  /* Components */
   --snow-fall-color: #abf0ff;
+  --split-flap-display-color: var(--color-secondary);
 }
 
 body {
