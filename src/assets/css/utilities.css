@@ -1,3 +1,15 @@
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-semi {
+  font-weight: 500;
+}
+
 .space_between {
   justify-content: space-between;
 }
