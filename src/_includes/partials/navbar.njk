@@ -1,4 +1,5 @@
 <nav class="cluster" data-justify="start">
-    <a href="/{{ locale }}/about">About</a>
-    <a href="/{{ locale }}/blog">Blog</a>
+    {% for item in navigation.items %}
+        <a href="/{{ locale }}{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.name }}</a>
+    {% endfor %}
 </nav>
