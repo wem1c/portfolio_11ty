@@ -9,5 +9,5 @@
 }
 .stack > * + * {
   /* ↓ Top margin is only applied to successive elements */
-  margin-block-start: var(--space, 1.5rem);
+  margin-block-start: var(--space-l, 1.5rem);
 }
