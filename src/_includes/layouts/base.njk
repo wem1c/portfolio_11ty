@@ -5,7 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        {% include "partials/meta.njk" %}
+        {% set pageTitle = title + ' - ' + site.name %}
+
+        <title>{{ pageTitle }}</title>
+
+        {% if not metaDesc %}
+            {% set metaDesc = summary %}
+        {% endif %}
+
+        <meta name="description" content="{{ metaDesc }}" />
+        <meta name="twitter:description" content="{{ metaDesc }}" />
+        <meta property="og:description" content="{{ metaDesc }}" />
+
+        {# TODO: change keywords #}
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+
+        {% set currentUrl = site.url + page.url %}
+
+        <link rel="canonical" href="{{ currentUrl }}" />
+
+        <meta property="og:site_name" content="{{ site.name }}" />
+        <meta property="og:title" content="{{ pageTitle }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ currentUrl }}" />
+        <meta property="og:site_name" content="{{ site.name }}" />
+
+        {% if socialImage %}
+            <meta property="og:image" content="{{ socialImage }}" />
+            <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="{{ socialImage }}" />
+            <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+        {% endif %}
 
         {# TODO: add favicons meta #}
         <link rel="icon" href="/images/favicon.svg" />
@@ -20,6 +51,7 @@
         {% block content %}
         {% endblock content %}
         {% include "partials/footer.njk" %}
+
         <is-land on:media="(prefers-reduced-motion: no-preference)" class="margin-block-start-0">
         <snow-fall mode="page"></snow-fall>
         </is-land>
