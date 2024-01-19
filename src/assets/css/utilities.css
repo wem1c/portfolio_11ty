@@ -18,6 +18,14 @@
   margin-block-start: 0 !important;
 }
 
+.padding-inline-start-none {
+  padding-inline-start: 0 !important;
+}
+
+.relative {
+  position: relative;
+}
+
 .rounded {
   border-radius: 10px;
 }

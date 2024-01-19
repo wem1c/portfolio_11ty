@@ -11,19 +11,40 @@ components: split-flap
             I'm <span class="color-secondary">Conor C.,</span>
         </h1>
         <h2 class="font-semi">
-            Your friendly neighborhood <split-flap-display data-words="programmer, developer, engineer, spiderman">programmer</split-flap-display>
+            your friendly neighborhood <split-flap-display data-words="programmer, developer, engineer, spiderman">programmer</split-flap-display>
         </h2>
     </main>
 
-    <section id="projects" class="box invert">
-        <h2>Projects</h2>
-        <ul id="project-list"
-            class="cluster list-style-type-none"
-            data-justify="start">
-            <li>Project</li>
-            <li>Project</li>
-            <li>Project</li>
-            <li>Project</li>
-        </ul>
+    <section id="projects" class="[ box invert ]">
+        <h2 id="section-title">Projects</h2>
+        <div id="project-grid"
+             class="[ flex-grid ] [ list-style-type-none padding-inline-start-none ]"
+             data-justify="center">
+            <div id="project-card" class="[ relative ]">
+                <div id="project-image" class="[ frame ]">
+                    <img id="project-image" src="/assets/images/placeholder.jpg" />
+                </div>
+                <h3 id="project-label" class="project__label">Project Title</h3>
+            </div>
+
+            <div id="project-card" class="[ relative ]">
+                <div id="project-image" class="[ frame ]">
+                    <img id="project-image" src="/assets/images/placeholder.jpg" />
+                </div>
+                <h3 id="project-label" class="project__label">Project Title</h3>
+            </div>
+            <div id="project-card" class="[ relative ]">
+                <div id="project-image" class="[ frame ]">
+                    <img id="project-image" src="/assets/images/placeholder.jpg" />
+                </div>
+                <h3 id="project-label" class="project__label">Project Title</h3>
+            </div>
+            <div id="project-card" class="[ relative ]">
+                <div id="project-image" class="[ frame ]">
+                    <img id="project-image" src="/assets/images/placeholder.jpg" />
+                </div>
+                <h3 id="project-label" class="project__label">Project Title</h3>
+            </div>
+        </div>
     </section>
 {% endblock content %}

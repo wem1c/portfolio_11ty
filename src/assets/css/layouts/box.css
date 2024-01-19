@@ -10,7 +10,7 @@
   background-color: var(--color-primary);
 }
 
-.box * {
+.box > * {
   color: inherit;
 }
 

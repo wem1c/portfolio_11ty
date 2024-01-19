@@ -9,3 +9,11 @@
 .cluster[data-justify="start"] {
   justify-content: flex-start;
 }
+
+.cluster[data-justify="end"] {
+  justify-content: flex-end;
+}
+
+.cluster[data-justify="center"] {
+  justify-content: center;
+}
