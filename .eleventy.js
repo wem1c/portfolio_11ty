@@ -58,7 +58,9 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
 
-  //eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy(
+    "./src/assets/images/**/*.{png,jpg,jpeg,gif,svg,webp}"
+  );
 
   return {
     markdownTemplateEngine: "njk",
