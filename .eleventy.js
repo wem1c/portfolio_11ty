@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   /**
    * PLUGINS
    */
+  // TODO: this plugin may be redundant; It's not used in this project.
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "en",
   });
