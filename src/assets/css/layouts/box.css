@@ -1,5 +1,5 @@
 .box {
-  padding: var(--space-2xs);
+  padding: var(--box-padding, 1rem);
   border: var(--border-thin) solid;
 
   /* ↓ Always apply the transparent outline, for high contrast mode */
