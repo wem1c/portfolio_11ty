@@ -1,0 +1,29 @@
+.projects {
+  --box-padding: var(--space-m) 0;
+}
+
+.projects > #project-grid {
+  margin-block-start: var(--space-m);
+}
+
+#project-grid {
+  gap: var(--space-xs);
+}
+
+.project__list > li {
+  max-inline-size: 300px;
+}
+
+.project__label {
+  position: absolute;
+  bottom: var(--space-xs-s);
+
+  margin-block-start: 0;
+  padding: var(--space-2xs);
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  color: white;
+  background-color: #00000075;
+}
