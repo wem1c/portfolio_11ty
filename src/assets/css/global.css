@@ -40,6 +40,7 @@
 
   /* Custom pairs */
   --space-s-l: clamp(1rem, 0.6rem + 2vw, 3rem);
+  --space-3xs-3xl: clamp(0.25rem, -1.5rem + 8.75vw, 9rem);
 
   /**
   * Colors
