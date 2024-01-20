@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpx @11ty/eleventy",
-    "dev": "pnpx @11ty/eleventy --serve"
+    "dev": "pnpx @11ty/eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
