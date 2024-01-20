@@ -2,6 +2,7 @@ const CleanCSS = require("clean-css");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const fastGlob = require("fast-glob");
 const fs = require("fs");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   /**
@@ -33,6 +34,30 @@ module.exports = function (eleventyConfig) {
   /**
    * SHORTCODES
    */
+
+  /* Global */
+  eleventyConfig.addShortcode(
+    "image",
+    async function (src, alt, widths, sizes) {
+      let metadata = await Image(src, {
+        widths: widths,
+        formats: ["avif", "webp", "auto"],
+        urlPath: "/assets/images/",
+        outputDir: "./_site/assets/images/",
+      });
+
+      let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      return Image.generateHTML(metadata, imageAttributes);
+    }
+  );
+
+  /* Nunjucks */
   eleventyConfig.addNunjucksShortcode("includeAll", function (globPattern) {
     const files = fastGlob.sync(globPattern);
     let result = "";
@@ -59,9 +84,9 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
 
-  eleventyConfig.addPassthroughCopy(
-    "./src/assets/images/**/*.{png,jpg,jpeg,gif,svg,webp}"
-  );
+  // eleventyConfig.addPassthroughCopy(
+  //   "./src/assets/images/**/*.{png,jpg,jpeg,gif,svg,webp}"
+  // );
 
   return {
     markdownTemplateEngine: "njk",
