@@ -5,7 +5,7 @@ components: split-flap
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <main id="hero">
+    <main id="hero" class="hero">
         <h1>Hello there! 👋</h1>
         <h1>
             I'm <span class="color-secondary">Conor C.,</span>
@@ -15,36 +15,19 @@ components: split-flap
         </h2>
     </main>
 
-    <section id="projects" class="[ box invert ]">
+    <section id="projects" class="[ box invert ] [ stack ] [ projects ]">
         <h2 id="section-title">Projects</h2>
+
         <div id="project-grid"
              class="[ flex-grid ] [ list-style-type-none padding-inline-start-none ]"
              data-justify="center">
-            <div id="project-card" class="[ relative ]">
-                <div id="project-image" class="[ frame ]">
-                    <img id="project-image" src="/assets/images/placeholder.jpg" />
-                </div>
-                <h3 id="project-label" class="project__label">Project Title</h3>
-            </div>
 
-            <div id="project-card" class="[ relative ]">
-                <div id="project-image" class="[ frame ]">
-                    <img id="project-image" src="/assets/images/placeholder.jpg" />
+            {% for project in projects %}
+                <div id="project-card" class="[ relative ]">
+                    <div id="project-image" class="[ frame ]">{% image project.imageSrc, "Website's homepage", ["auto"], "100vw" %}</div>
+                    <h3 id="project-label" class="project__label">{{ project.title }}</h3>
                 </div>
-                <h3 id="project-label" class="project__label">Project Title</h3>
-            </div>
-            <div id="project-card" class="[ relative ]">
-                <div id="project-image" class="[ frame ]">
-                    <img id="project-image" src="/assets/images/placeholder.jpg" />
-                </div>
-                <h3 id="project-label" class="project__label">Project Title</h3>
-            </div>
-            <div id="project-card" class="[ relative ]">
-                <div id="project-image" class="[ frame ]">
-                    <img id="project-image" src="/assets/images/placeholder.jpg" />
-                </div>
-                <h3 id="project-label" class="project__label">Project Title</h3>
-            </div>
+            {% endfor %}
         </div>
     </section>
 {% endblock content %}
