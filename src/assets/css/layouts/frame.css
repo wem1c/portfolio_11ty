@@ -10,7 +10,9 @@
 }
 
 .frame > img,
-.frame > video {
+.frame > video,
+.frame > picture,
+.frame > picture > img {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
