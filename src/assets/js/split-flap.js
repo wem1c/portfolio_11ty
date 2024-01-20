@@ -14,7 +14,6 @@ class SplitFlapDisplay extends HTMLElement {
       (max, word) => Math.max(max, word.length),
       0
     );
-    console.log(this.maxWordLen);
 
     let sheet = new CSSStyleSheet();
     const css = `
