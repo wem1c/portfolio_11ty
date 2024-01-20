@@ -24,7 +24,7 @@ into multiple columns */
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-s, 1rem);
+  gap: var(--grid-gap, 1rem);
 }
 .flex-grid > * {
   flex: 1 1 var(--ideal);
