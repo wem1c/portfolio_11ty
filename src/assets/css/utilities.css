@@ -1,3 +1,7 @@
+.border-none {
+  border: none !important;
+}
+
 .color-secondary {
   color: var(--color-secondary);
 }
