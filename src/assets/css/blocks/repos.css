@@ -5,6 +5,7 @@
 #repo-grid {
   --ideal: 55ch;
   --max: 75ch;
+  --grid-gap: var(--space-l);
 
   margin-block-start: var(--space-m);
 }
