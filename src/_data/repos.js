@@ -6,6 +6,11 @@ module.exports = async function () {
   var repoURL = "";
   var result = [];
 
+  if (process.env.CURR_ENV === "dev") {
+    console.log("Using dev env; skipping fetch.");
+    return result;
+  }
+
   console.log(`Fetching GitHub repositories for ${githubAccount}`);
   while (!done) {
     currentPage += 1;
