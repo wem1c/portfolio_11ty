@@ -15,7 +15,7 @@ components: split-flap
         </h2>
     </main>
 
-    <section id="projects" class="[ box invert ] [ stack ] [ projects ]">
+    <section id="projects" class="projects | box invert | stack | border-none">
         <h2 id="section-title">Projects</h2>
 
         <div id="project-grid"
@@ -28,6 +28,28 @@ components: split-flap
                     <h3 id="project-label" class="project__label">{{ project.title }}</h3>
                 </div>
             {% endfor %}
+        </div>
+    </section>
+
+    <section id="repos" class="repos | box stack | border-none">
+        <h2 id="section-title">Repositories</h2>
+
+        <div id="repo-grid"
+             class="[ flex-grid ] [ list-style-type-none padding-inline-start-none ]"
+             data-justify="center">
+
+            {% if repos.length > 0 %}
+                {% for repo in repos %}
+                    <a href={{ repo.html_url }}>
+                        <div id="repo-card" class="[ relative ]">
+                            <h3 id="repo-name">{{ repo.name }}</h3>
+                            <p id="repo-desc">{{ repo.description }}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            {% else %}
+                <p>No repository data to display</p>
+            {% endif %}
         </div>
     </section>
 {% endblock content %}

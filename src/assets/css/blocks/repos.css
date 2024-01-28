@@ -1,0 +1,16 @@
+.repos {
+  --box-padding: var(--space-m);
+}
+
+#repo-grid {
+  margin-block-start: var(--space-m);
+}
+
+#repo-grid > a {
+  color: black;
+  text-decoration: none;
+}
+
+#repo-name {
+  text-decoration: underline;
+}
