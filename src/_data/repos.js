@@ -33,8 +33,5 @@ module.exports = async function () {
     }
   }
 
-  // TODO: remove
-  console.log("DEBUG: result[0]", result[0]);
-
   return result;
 };
