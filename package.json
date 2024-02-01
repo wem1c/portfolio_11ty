@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "CURR_ENV=dev pnpx @11ty/eleventy --serve",
     "build": "pnpx @11ty/eleventy",
-    "dev": "CURR_ENV=dev pnpx @11ty/eleventy --serve --watch"
+    "start": "pnpx @11ty/eleventy --serve --incremental"
   },
   "keywords": [],
   "author": "",
