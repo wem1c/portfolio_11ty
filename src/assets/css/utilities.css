@@ -6,6 +6,10 @@
   color: var(--color-secondary);
 }
 
+.color-black {
+  color: black;
+}
+
 .font-normal {
   font-weight: normal;
 }
