@@ -10,8 +10,8 @@
   gap: var(--space-xs);
 }
 
-.project__list > li {
-  max-inline-size: 300px;
+#project-link:hover > .project__label {
+  text-decoration: underline;
 }
 
 .project__label {
