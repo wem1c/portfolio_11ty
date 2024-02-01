@@ -1,36 +1,34 @@
 const githubAccount = "wem1c";
 
 module.exports = async function () {
-  var currentPage = 0;
-  var done = false;
-  var repoURL = "";
-  var result = [];
+  const repoURL = `https://api.github.com/users/${githubAccount}/repos?sort=updated`;
+  let result = [];
 
   if (process.env.CURR_ENV === "dev") {
-    console.log("Using dev env; skipping fetch.");
+    console.log("Dev env detected; skipping fetch.");
     return result;
   }
 
   console.log(`Fetching GitHub repositories for ${githubAccount}`);
-  while (!done) {
-    currentPage += 1;
-    repoURL = `https://api.github.com/users/${githubAccount}/repos?per_page=100&page=${currentPage}`;
+  try {
     console.log(`Fetching ${repoURL}`);
-    var response = await fetch(repoURL);
-    var tempRes = await response.json();
+    let response = await fetch(repoURL);
+    let data = await response.json();
+
     if (response.status == 200) {
-      if (tempRes.length === 0) {
-        done = true;
-      } else {
-        console.log(`Found ${tempRes.length} repos`);
-        result = result.concat(tempRes);
-      }
-    } else {
-      console.error(`\nError: ${response.status} - ${response.statusText}\n`);
-      if (tempRes.message)
-        console.log(tempRes.message, tempRes.documentation_url);
-      process.exit(1);
+      console.log(`Found ${data.length} repos`);
+
+      console.log(`Filtering out archived repos`);
+      let filtered = data.filter((repo, _) => repo.archived === false);
+      console.log(`Found ${filtered.length} non-archived repos`);
+
+      console.log("Returning newest 6 repos.");
+      result = filtered.slice(0, 6);
     }
+  } catch (error) {
+    console.error(`Error: ${error}`);
+    response &&
+      console.error(`\nError: ${response.status} - ${response.statusText}\n`);
   }
 
   return result;
