@@ -1,3 +1,7 @@
+#hero {
+  margin-block: var(--space-3xl);
+}
+
 .hero > :first-child {
   margin-block-start: 0;
 }
