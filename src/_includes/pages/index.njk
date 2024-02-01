@@ -16,7 +16,9 @@ components: split-flap
     </main>
 
     <section id="projects" class="projects | box invert | stack | border-none">
-        <h2 id="section-title">Projects</h2>
+        <header id="projects-header">
+            <h2 id="projects-title">Latest Projects</h2>
+        </header>
 
         <div id="project-grid"
              class="[ flex-grid ] [ list-style-type-none padding-inline-start-none ]"
@@ -32,10 +34,13 @@ components: split-flap
     </section>
 
     <section id="repos" class="repos | box stack | border-none">
-        <h2 id="section-title">Repositories</h2>
+        <header id="repos-header">
+            <h2 id="repos-title">Latest Repos</h2>
+            <a href="https://github.com/wem1c">View all</a>
+        </header>
 
         <div id="repo-grid"
-             class="[ flex-grid ] [ list-style-type-none padding-inline-start-none ]">
+             class="flex-grid | list-style-type-none padding-inline-start-none ]">
 
             {% if repos.length > 0 %}
                 {% for repo in repos %}
