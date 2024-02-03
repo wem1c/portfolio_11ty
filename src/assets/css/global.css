@@ -45,8 +45,15 @@
   /**
   * Colors
   */
-  --color-primary: #fdf6e3;
-  --color-secondary: #166534;
+  --hue: 44;
+  --hue-complement: calc(var(--hue) + 180);
+  --hue-right-analog: calc(var(--hue) + 30);
+  --hue-left-analog: calc(var(--hue) - 30);
+
+  --color-primary: hsl(var(--hue) 87% 94%);
+  --color-secondary: hsl(var(--hue-complement) 100% 0%);
+  --color-accent-left: hsl(var(--hue-right-analog) 100% 40%);
+  --color-accent-right: hsl(var(--hue-left-analog) 100% 80%);
 
   /**
   * Borders
