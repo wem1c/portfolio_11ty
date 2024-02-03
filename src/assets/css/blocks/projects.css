@@ -2,6 +2,10 @@
   --box-padding: var(--space-m);
 }
 
+#projects {
+  background-color: var(--color-primary-dark);
+}
+
 .projects > #project-grid {
   margin-block-start: var(--space-m);
 }

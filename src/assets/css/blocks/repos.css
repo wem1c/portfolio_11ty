@@ -2,6 +2,10 @@
   --box-padding: var(--space-m);
 }
 
+.repos > header > a {
+  color: var(--color-secondary-light, black);
+}
+
 #repo-grid {
   --ideal: 55ch;
   --max: 75ch;

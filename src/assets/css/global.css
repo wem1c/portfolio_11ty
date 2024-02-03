@@ -51,8 +51,15 @@
   --hue-left-analog: calc(var(--hue) - 30);
 
   --color-primary: hsl(var(--hue) 87% 94%);
-  --color-secondary: hsl(var(--hue-complement) 100% 0%);
+  --color-primary-dark: hsl(var(--hue) 42% 88%);
+  --color-primary-darker: hsl(var(--hue) 22% 80%);
+
+  --color-secondary: hsl(var(--hue-complement) 0% 0%);
+  --color-secondary-light: hsl(var(--hue-complement) 0% 25%);
+
   --color-accent-left: hsl(var(--hue-right-analog) 100% 40%);
+  --color-accent-left-light: hsl(var(--hue-right-analog) 80% 80%);
+
   --color-accent-right: hsl(var(--hue-left-analog) 100% 80%);
 
   /**
