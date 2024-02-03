@@ -1,3 +1,11 @@
+.bg-accent-left {
+  background-color: var(--color-accent-left);
+}
+
+.bg-accent-right {
+  background-color: var(--color-accent-right);
+}
+
 .border-none {
   border: none !important;
 }
@@ -40,4 +48,20 @@
 
 .space_between {
   justify-content: space-between;
+}
+
+.text-accent-left {
+  color: var(--color-accent-left);
+}
+
+.text-accent-right {
+  color: var(--color-accent-right);
+}
+
+.text-shadow-accent-right {
+  text-shadow: 2px 2px var(--color-accent-right);
+}
+
+.text-shadow-accent-left {
+  text-shadow: 2px 2px var(--color-accent-left);
 }
