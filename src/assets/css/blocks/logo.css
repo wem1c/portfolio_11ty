@@ -1,8 +1,27 @@
 .logo {
-  text-decoration: none;
-  color: var(--color-secondary);
+  /* Make text color a gradient */
+  background: linear-gradient(
+    to right,
+    var(--color-accent-left, #fff),
+    var(--color-accent-right, #fff)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  margin-block: 0.5rem;
+
   font-size: var(--step-3);
   font-weight: 700;
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
     "DejaVu Sans Mono", monospace;
+  text-decoration: none;
+}
+
+.logo:hover {
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  color: var(--color-primary, black);
 }
