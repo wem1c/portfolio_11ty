@@ -20,7 +20,7 @@ class SplitFlapDisplay extends HTMLElement {
     :host {
       display: inline-block;
       color: var(--split-flap-display-color, currentColor);
-      width: ${this.maxWordLen}ch;
+      width: ${this.maxWordLen + 2}ch;
       font-family: monospace;
     }
     `;
@@ -34,12 +34,12 @@ class SplitFlapDisplay extends HTMLElement {
     this.displayWord(this.currentIndex);
 
     // Set the interval to change the word
-    this.interval = setInterval(() => this.changeWord(), 1850);
+    this.interval = setInterval(() => this.changeWord(), 1800);
   }
 
   // Function to update the displayed word
   displayWord(index) {
-    this.shadowRoot.textContent = `${this.wordArray[index]}.`;
+    this.shadowRoot.textContent = this.wordArray[index];
   }
 
   // Function to change the displayed word
