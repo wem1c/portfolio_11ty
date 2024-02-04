@@ -11,11 +11,41 @@
 }
 
 #project-grid {
-  gap: var(--space-xs);
+  --grid-gap: var(--space-m);
 }
 
-#project-link:hover > .project__label {
+#project-grid > #project-card {
+  border: 1px solid var(--color-secondary);
+  transform-style: preserve-3d;
+}
+
+#project-grid > #project-card::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translate3d(10px, 8px, -1px); /* (X, Y, Z) */
+  background: linear-gradient(
+    to right top,
+    var(--color-accent-left),
+    var(--color-accent-right)
+  );
+}
+
+#project-grid > #project-card:hover::before {
+  transform: translate3d(0px, 0px, -1px); /* (X, Y, Z) */
+}
+
+#project-grid > #project-card:hover > #project-link > .project__label {
   text-decoration: underline;
+  background: linear-gradient(
+    to right top,
+    var(--color-accent-left),
+    var(--color-accent-right)
+  );
+}
+
+#project-grid > #project-card:active {
+  translate: 0px 2px;
 }
 
 .project__label {
