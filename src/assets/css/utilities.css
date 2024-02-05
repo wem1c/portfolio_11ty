@@ -65,3 +65,7 @@
 .text-shadow-accent-left {
   text-shadow: 2px 2px var(--color-accent-left);
 }
+
+.underline-none {
+  text-decoration: none;
+}
