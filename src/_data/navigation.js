@@ -1,8 +1,8 @@
 module.exports = {
   en: [
     {
-      text: "About me",
-      url: "/en/about-me/",
+      text: "About",
+      url: "/en/about/",
     },
     {
       text: "Blog",
@@ -12,7 +12,7 @@ module.exports = {
   cnr: [
     {
       text: "O meni",
-      url: "/cnr/o-meni/",
+      url: "/cnr/about/",
     },
     {
       text: "Blog",
