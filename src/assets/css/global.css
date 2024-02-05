@@ -87,3 +87,7 @@ body {
 body > * {
   padding: 0 var(--space-2xs);
 }
+
+a {
+  text-underline-offset: 0.2em;
+}
