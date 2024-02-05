@@ -1,18 +1,9 @@
 const CleanCSS = require("clean-css");
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const fastGlob = require("fast-glob");
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
-  /**
-   * PLUGINS
-   */
-  // TODO: this plugin may be redundant; It's not used in this project.
-  eleventyConfig.addPlugin(EleventyI18nPlugin, {
-    defaultLanguage: "en",
-  });
-
   /**
    * COLLECTIONS
    */
@@ -29,6 +20,9 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
+  });
+  eleventyConfig.addFilter("locale_url", (url, currLocale, targerLocale) => {
+    return url.replace(`/${currLocale}`, `/${targerLocale}`);
   });
 
   /**
@@ -83,10 +77,6 @@ module.exports = function (eleventyConfig) {
       "/assets/js/is-land-autoinit.js",
   });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
-
-  // eleventyConfig.addPassthroughCopy(
-  //   "./src/assets/images/**/*.{png,jpg,jpeg,gif,svg,webp}"
-  // );
 
   return {
     markdownTemplateEngine: "njk",
