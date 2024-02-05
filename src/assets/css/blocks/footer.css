@@ -4,5 +4,5 @@ footer {
 
   padding-block: 1rem;
 
-  border-top: 2px solid var(--color-primary-darker, black);
+  border-top: 2px solid var(--color-secondary-lightest);
 }
