@@ -84,8 +84,14 @@ body {
   margin: 0;
 }
 
-body > * {
+body > *:not(hr) {
   padding: 0 var(--space-2xs);
+}
+
+body > hr {
+  width: 100%;
+  border-top: 2px solid black;
+  margin: 0;
 }
 
 a {
