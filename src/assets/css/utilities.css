@@ -30,8 +30,13 @@
   list-style-type: none;
 }
 
+/* TODO: Check whether this class is used with spyder */
 .margin-block-start-0 {
   margin-block-start: 0 !important;
+}
+
+.padding-none {
+  padding: 0;
 }
 
 .padding-inline-start-none {
