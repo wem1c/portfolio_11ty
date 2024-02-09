@@ -46,13 +46,15 @@
         <link rel="stylesheet" href="/assets/css/bundle.min.css" />
     </head>
 
-    <body class="stack">
+    <body>
         {% include "partials/header.njk" %}
+        <hr />
         {% block content %}
         {% endblock content %}
+        <hr />
         {% include "partials/footer.njk" %}
 
-        <is-land on:media="(prefers-reduced-motion: no-preference)" class="margin-block-start-0">
+        <is-land on:media="(prefers-reduced-motion: no-preference)" class="padding-none">
         <snow-fall mode="page"></snow-fall>
         </is-land>
     </body>
