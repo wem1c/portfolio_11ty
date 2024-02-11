@@ -1,3 +1,7 @@
+.align-items-center {
+  align-items: center;
+}
+
 .bg-primary {
   background-color: var(--color-primary);
 }
@@ -20,6 +24,14 @@
 
 .list-style-type-none {
   list-style-type: none;
+}
+
+.margin-block-start-none {
+  margin-block-start: 0;
+}
+
+.max-h-10 {
+  max-height: 10svh;
 }
 
 .padding-none {
