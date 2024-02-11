@@ -2,7 +2,7 @@
   /* ↓ Establish a grid context */
   display: grid;
   /* ↓ Set a gap between grid items */
-  grid-gap: 1rem;
+  grid-gap: var(--grid-gap, 1rem);
   /* ↓ Set the minimum column width */
   --minimum: 300px;
 }
