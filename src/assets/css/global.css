@@ -91,6 +91,10 @@ body > *:not(hr) {
   padding-inline: var(--space-3xs-3xl);
 }
 
+body > header {
+  --cluster-gap: var(--space-s);
+}
+
 body > hr {
   width: 100%;
   border: 1px solid var(--color-text);

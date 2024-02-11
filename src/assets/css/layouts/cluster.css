@@ -1,19 +1,23 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-s, 1rem);
+  gap: var(--cluster-gap, 1rem);
   justify-content: space-between;
   align-items: center;
 }
 
-.cluster[data-justify="start"] {
-  justify-content: flex-start;
+.cluster[data-justify="center"] {
+  justify-content: center;
 }
 
 .cluster[data-justify="end"] {
   justify-content: flex-end;
 }
 
-.cluster[data-justify="center"] {
-  justify-content: center;
+.cluster[data-justify="start"] {
+  justify-content: flex-start;
+}
+
+.cluster[data-justify="around"] {
+  justify-content: space-around;
 }
