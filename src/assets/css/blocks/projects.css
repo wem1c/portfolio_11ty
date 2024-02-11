@@ -3,7 +3,7 @@
 }
 
 #projects {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
 }
 
 .projects > #project-grid {
@@ -15,7 +15,7 @@
 }
 
 #project-grid > #project-card {
-  border: 1px solid var(--color-secondary);
+  border: 2px solid black;
   transform-style: preserve-3d;
 }
 
@@ -24,24 +24,13 @@
   inset: 0;
   position: absolute;
   transform: translate3d(10px, 8px, -1px); /* (X, Y, Z) */
-  background: linear-gradient(
-    to right top,
-    var(--color-accent-left),
-    var(--color-accent-right)
-  );
-}
-
-#project-grid > #project-card:hover::before {
-  transform: translate3d(0px, 0px, -1px); /* (X, Y, Z) */
+  background-color: black;
 }
 
 #project-grid > #project-card:hover > #project-link > .project__label {
   text-decoration: underline;
-  background: linear-gradient(
-    to right top,
-    var(--color-accent-left),
-    var(--color-accent-right)
-  );
+  background: var(--color-primary);
+  color: var(--color-text);
 }
 
 #project-grid > #project-card:active {
@@ -55,8 +44,8 @@
   margin-block-start: 0;
   padding: var(--space-2xs);
 
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border: 2px solid var(--color-text);
+  border-left: none;
 
   color: white;
   background-color: #00000075;

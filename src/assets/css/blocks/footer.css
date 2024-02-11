@@ -2,5 +2,7 @@ footer {
   position: relative;
   bottom: 0;
 
-  padding-block: 1rem;
+  padding-block: var(--space-xs);
+
+  color: var(--color-text-light);
 }

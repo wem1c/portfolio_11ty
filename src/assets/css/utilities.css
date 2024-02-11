@@ -1,21 +1,13 @@
-.bg-accent-left {
-  background-color: var(--color-accent-left);
+.bg-primary {
+  background-color: var(--color-primary);
 }
 
-.bg-accent-right {
-  background-color: var(--color-accent-right);
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
 
 .border-none {
   border: none !important;
-}
-
-.color-secondary {
-  color: var(--color-secondary);
-}
-
-.color-black {
-  color: black;
 }
 
 .font-normal {
@@ -30,13 +22,12 @@
   list-style-type: none;
 }
 
-/* TODO: Check whether this class is used with spyder */
-.margin-block-start-0 {
-  margin-block-start: 0 !important;
-}
-
 .padding-none {
   padding: 0;
+}
+
+.padding-inline-3xs-3xl {
+  padding-inline: var(--space-3xs-3xl) !important;
 }
 
 .padding-inline-start-none {
@@ -55,20 +46,24 @@
   justify-content: space-between;
 }
 
-.text-accent-left {
-  color: var(--color-accent-left);
+.text-accent {
+  color: var(--color-accent);
 }
 
-.text-accent-right {
-  color: var(--color-accent-right);
+.text-bold {
+  font-weight: 700;
 }
 
-.text-shadow-accent-right {
-  text-shadow: 2px 2px var(--color-accent-right);
+.text-secondary {
+  color: var(--color-secondary);
 }
 
-.text-shadow-accent-left {
-  text-shadow: 2px 2px var(--color-accent-left);
+.text-shadow {
+  text-shadow: 1px 1px 0px var(--color-text);
+}
+
+.text-xl {
+  font-size: 1.25em;
 }
 
 .underline-none {

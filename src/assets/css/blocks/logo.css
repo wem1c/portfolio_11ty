@@ -1,10 +1,6 @@
 .logo {
   /* Make text color a gradient */
-  background: linear-gradient(
-    to right,
-    var(--color-accent-left, #fff),
-    var(--color-accent-right, #fff)
-  );
+  background: var(--color-secondary);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -23,5 +19,9 @@
 .logo:hover {
   background-clip: border-box;
   -webkit-background-clip: border-box;
-  color: var(--color-primary, black);
+  color: var(--color-background, black);
+}
+
+.logo:active {
+  translate: 0 0.25rem;
 }
