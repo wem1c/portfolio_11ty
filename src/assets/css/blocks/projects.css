@@ -3,11 +3,14 @@
 }
 
 #projects {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .projects > #project-grid {
   margin-block-start: var(--space-m);
+
+  /* Account for project-card::before drop shadow */
+  padding-inline-end: 8px;
 }
 
 #project-grid {
@@ -23,13 +26,13 @@
   content: "";
   inset: 0;
   position: absolute;
-  transform: translate3d(10px, 8px, -1px); /* (X, Y, Z) */
+  transform: translate3d(10px, 8px, -1px);
   background-color: black;
 }
 
 #project-grid > #project-card:hover > #project-link > .project__label {
   text-decoration: underline;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   color: var(--color-text);
 }
 
