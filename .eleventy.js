@@ -77,6 +77,7 @@ module.exports = function (eleventyConfig) {
       "/assets/js/is-land-autoinit.js",
   });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
+  eleventyConfig.addPassthroughCopy("./src/assets/images/favicons/**/*");
 
   return {
     markdownTemplateEngine: "njk",
