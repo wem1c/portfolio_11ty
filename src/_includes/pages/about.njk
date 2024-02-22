@@ -1,5 +1,14 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <h1>About</h1>
+    <main id="about" class="about">
+        <aside id="about__aside" class="about__aside | stack">
+            <div id="image-container" class="image-container | frame">
+                {% image "./src/assets/images/pfp_circle.png", "Conor C.'s profile picture", ["auto"], "100vw" %}
+            </div>
+            <a href="#" class="button">Email me!</a>
+        </aside>
+        <h2 class="title">Bio</h2>
+        {% for paragraph in dictionary.bio[locale] %}<p>{{ paragraph }}</p>{% endfor %}
+    </main>
 {% endblock content %}
