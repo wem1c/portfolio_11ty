@@ -26,6 +26,7 @@ into multiple columns */
   flex-wrap: wrap;
   gap: var(--grid-gap, 1rem);
 }
+
 .flex-grid > * {
   flex: 1 1 var(--ideal);
   max-inline-size: var(--max, 100%);
