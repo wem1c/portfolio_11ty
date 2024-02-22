@@ -9,7 +9,9 @@
 
 /* Tint the background when hovering */
 .button:hover {
-  background-color: color-mix(in oklch, var(--color-secondary) 100%, white 16%);
+  background-color: color-mix(in oklch, var(--color-secondary) 100%, white 20%);
+
+  text-decoration: none;
 }
 
 /* Shade the background when clicked */
