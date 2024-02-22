@@ -22,6 +22,7 @@
   transform-style: preserve-3d;
 }
 
+/* Drop-shadow */
 #project-grid > #project-card::before {
   content: "";
   inset: 0;
