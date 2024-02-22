@@ -1,0 +1,17 @@
+.about > p,
+.about > .title {
+  max-width: 75ch;
+}
+
+.about > .about__aside {
+  margin-block: var(--space-s, 1rem);
+
+  display: inline-flex;
+
+  max-width: min(100vw, 45ch);
+}
+
+#about__aside > .image-container {
+  --n: 1;
+  --d: 1;
+}
