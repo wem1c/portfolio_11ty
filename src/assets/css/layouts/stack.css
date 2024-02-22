@@ -3,11 +3,17 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .stack > * {
   /* ↓ Any extant vertical margins are removed */
   margin-block: 0;
 }
+
 .stack > * + * {
   /* ↓ Top margin is only applied to successive elements */
   margin-block-start: var(--space-m, 1.5rem);
+}
+
+.stack[data-align="center"] {
+  align-items: center;
 }
