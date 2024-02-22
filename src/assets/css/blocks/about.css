@@ -1,17 +1,18 @@
-.about > p,
-.about > .title {
-  max-width: 75ch;
+.about {
+  --cluster-gap: var(--space-3xs-3xl, 1rem);
 }
 
-.about > .about__aside {
+.about__image {
+  max-width: min(100vw, 40ch);
+
   margin-block: var(--space-s, 1rem);
-
-  display: inline-flex;
-
-  max-width: min(100vw, 45ch);
 }
 
-#about__aside > .image-container {
+#about__image > .image-container {
   --n: 1;
   --d: 1;
+}
+
+.about__bio {
+  width: min(100%, 60ch);
 }
