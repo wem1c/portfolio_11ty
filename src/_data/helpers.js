@@ -8,15 +8,19 @@ module.exports = {
    * @returns {String} The attributes or empty
    */
   getLinkActiveState(itemUrl, pageUrl) {
-    let pageUrlClean = pageUrl.replace(/\/en/, "").replace(/\.html$/, "");
+    // TODO: This line may be a smarter way to do this or it may not be
+    // necessary for the way this website has been written.
+    // Check when deployed!
+    //
+    //let pageUrlClean = pageUrl.replace(/\/en/, "").replace(/\.html$/, "");
 
     let response = "";
 
-    if (itemUrl === pageUrlClean) {
+    if (itemUrl === pageUrl) {
       response = ' aria-current="page"';
     }
 
-    if (itemUrl.length > 1 && pageUrlClean.indexOf(itemUrl) === 0) {
+    if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
       response += ' data-state="active"';
     }
 
