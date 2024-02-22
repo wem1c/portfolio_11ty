@@ -1,11 +1,19 @@
-a {
+.navbar > a {
   text-decoration: none;
+
+  padding: 0.25em 0.5em;
 }
 
-a:hover {
+.navbar > a:hover {
   text-decoration: underline;
 }
 
-a:active {
+.navbar > a:active {
   translate: 0 0.25rem;
+}
+
+.navbar > a[data-state="active"] {
+  background-color: var(--color-background-dark);
+
+  border: 2px solid black;
 }
