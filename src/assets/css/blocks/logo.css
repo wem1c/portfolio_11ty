@@ -5,8 +5,7 @@
   -webkit-background-clip: text;
   color: transparent;
 
-  border-radius: 0.5rem;
-  padding: 0 0.75rem;
+  padding: 0 0.25em;
   margin-block: 0.5rem;
 
   font-size: var(--step-3);
@@ -20,8 +19,10 @@
   background-clip: border-box;
   -webkit-background-clip: border-box;
   color: var(--color-background, black);
+
+  box-shadow: 2px 2px black;
 }
 
 .logo:active {
-  translate: 0 0.25rem;
+  box-shadow: none;
 }
