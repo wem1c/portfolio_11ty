@@ -82,6 +82,14 @@
   font-size: 1.25em;
 }
 
+.hover\:-translate-y-2:hover {
+  translate: 0px -2px;
+}
+
+.active\:translate-y-0:active {
+  translate: 0px 0px;
+}
+
 .underline-none {
   text-decoration: none;
 }
