@@ -16,3 +16,7 @@
 .about__bio {
   width: min(100%, 60ch);
 }
+
+.about__bio > p {
+  margin-block-start: 2em;
+}
