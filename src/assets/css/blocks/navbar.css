@@ -17,7 +17,7 @@
 }
 
 .navbar > a[data-state="active"] {
-  background-color: var(--color-background-dark);
+  background-color: color-mix(in oklch, var(--color-secondary) 100%, black 4%);
 
   border-color: black;
 
