@@ -1,6 +1,6 @@
 .logo {
   /* Make text color a gradient */
-  background: var(--color-background);
+  background: var(--color-primary);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
