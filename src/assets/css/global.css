@@ -94,6 +94,8 @@ body > *:not(hr) {
 
 body > header {
   --cluster-gap: var(--space-s);
+
+  background-color: var(--color-secondary);
 }
 
 body > hr {
