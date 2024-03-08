@@ -7,6 +7,8 @@
   padding: 0.25em 0.5em;
 
   box-shadow: 0.25em 0.25em 0px black;
+
+  text-decoration: none;
 }
 
 .button[button-color="secondary"] {
@@ -20,8 +22,6 @@
 /* Tint the background when hovering */
 .button:hover {
   background-color: color-mix(in oklch, var(--button-color) 100%, white 20%);
-
-  text-decoration: none;
 }
 
 /* Shade the background when clicked */
