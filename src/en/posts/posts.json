@@ -1,3 +1,4 @@
 {
-  "permalink": "/{{ locale }}/blog/{{ page.fileSlug }}.html"
+  "permalink": "/{{ locale }}/blog/{{ page.fileSlug }}.html",
+  "layout": "pages/post.njk"
 }
