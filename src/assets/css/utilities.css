@@ -38,6 +38,10 @@
   margin-block-start: 0;
 }
 
+.margin-inline-auto {
+  margin-inline: auto;
+}
+
 .max-h-10 {
   max-height: 10svh;
 }
