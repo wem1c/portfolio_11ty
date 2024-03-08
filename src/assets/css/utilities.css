@@ -22,8 +22,16 @@
   font-weight: 500;
 }
 
+.line-height-0 {
+  line-height: 0;
+}
+
 .list-style-type-none {
   list-style-type: none;
+}
+
+.margin-block-0 {
+  margin-block: 0;
 }
 
 .margin-block-start-none {
@@ -72,6 +80,10 @@
 
 .text-secondary {
   color: var(--color-secondary);
+}
+
+.text-primary {
+  color: var(--color-primary);
 }
 
 .text-shadow {
