@@ -106,3 +106,7 @@ body > hr {
 a {
   text-underline-offset: 0.2em;
 }
+
+article {
+  max-width: 75ch;
+}
