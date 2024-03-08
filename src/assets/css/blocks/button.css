@@ -1,5 +1,7 @@
 .button {
-  background-color: var(--color-secondary, white);
+  --button-color: var(--color-primary, black);
+
+  background-color: var(--button-color, white);
   color: var(--color-text, black);
 
   padding: 0.25em 0.5em;
@@ -7,14 +9,24 @@
   box-shadow: 0.25em 0.25em 0px black;
 }
 
+.button[button-color="secondary"] {
+  --button-color: var(--color-secondary, black);
+}
+
+.button[button-shape="square"] {
+  padding: 0.25em;
+}
+
 /* Tint the background when hovering */
 .button:hover {
-  background-color: color-mix(in oklch, var(--color-secondary) 100%, white 20%);
+  background-color: color-mix(in oklch, var(--button-color) 100%, white 20%);
 
   text-decoration: none;
 }
 
 /* Shade the background when clicked */
 .button:active {
-  background-color: color-mix(in oklch, var(--color-secondary) 100%, black 4%);
+  background-color: color-mix(in oklch, var(--button-color) 100%, black 4%);
+
+  box-shadow: none;
 }
