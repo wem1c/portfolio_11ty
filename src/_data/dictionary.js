@@ -17,4 +17,5 @@ module.exports = {
   },
   "coming-soon": { en: "Coming Soon", cnr: "Uskoro" },
   me: { en: "That's me! 👇", cnr: "To sam ja! 👇" },
+  "no-posts": { en: "No posts yet!", cnr: "Još nema članaka!" },
 };
