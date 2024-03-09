@@ -5,17 +5,6 @@ const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   /**
-   * COLLECTIONS
-   */
-  eleventyConfig.addCollection("posts_en", function (collection) {
-    return collection.getFilteredByGlob("./src/en/posts/*.md");
-  });
-
-  eleventyConfig.addCollection("posts_cnr", function (collection) {
-    return collection.getFilteredByGlob("./src/cnr/posts/*.md");
-  });
-
-  /**
    * FILTERS
    */
   eleventyConfig.addFilter("cssmin", function (code) {
