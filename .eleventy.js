@@ -21,7 +21,14 @@ module.exports = function (eleventyConfig) {
   /* Global */
   eleventyConfig.addShortcode(
     "image",
-    async function (src, alt, widths, sizes) {
+    async function (
+      src,
+      alt,
+      widths,
+      sizes = "100vw",
+      loading = "lazy",
+      decoding = "async"
+    ) {
       let metadata = await Image(src, {
         widths: widths,
         formats: ["avif", "webp", "auto"],
@@ -32,8 +39,8 @@ module.exports = function (eleventyConfig) {
       let imageAttributes = {
         alt,
         sizes,
-        loading: "lazy",
-        decoding: "async",
+        loading,
+        decoding,
       };
 
       return Image.generateHTML(metadata, imageAttributes);
