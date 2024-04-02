@@ -2,6 +2,10 @@
   align-items: center;
 }
 
+.aspect-3-2 {
+  aspect-ratio: 3/2;
+}
+
 .bg-primary {
   background-color: var(--color-primary);
 }
@@ -82,12 +86,20 @@
   font-weight: 700;
 }
 
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-primary-light {
+  color: color-mix(in oklch, var(--color-primary) 100%, white 30%);
+}
+
 .text-secondary {
   color: var(--color-secondary);
 }
 
-.text-primary {
-  color: var(--color-primary);
+.text-secondary-dark {
+  color: color-mix(in oklch, var(--color-secondary) 100%, black 40%);
 }
 
 .text-shadow {
