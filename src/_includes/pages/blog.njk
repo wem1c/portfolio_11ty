@@ -37,7 +37,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-            <p>{{ dictionary["no-posts"].locale }}</p>
+            <p>{{ dictionary["no-posts"][locale] }}</p>
         {% endif %}
     </main>
 {% endblock content %}
