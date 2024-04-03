@@ -39,7 +39,9 @@ components: split-flap
                 <div id="project-card" class="[ relative ]">
                     <a href="{{ project.url }}"
                        aria-label="{{ "Visit the " + project.title + " website." }}">
-                        <div id="project-image" class="[ frame ]">{% image project.imageSrc, "Website's homepage", ["auto"], "100vw" %}</div>
+                        <div id="project-image" class="[ frame ]">
+                            {% image project.imageSrc, project.title + "'s homepage.", [660, 385], "(max-width: 1024px) 90vw, 45vw" %}
+                        </div>
                         <h3 id="project-label" class="project__label">{{ project.title }}</h3>
                     </a>
                 </div>
