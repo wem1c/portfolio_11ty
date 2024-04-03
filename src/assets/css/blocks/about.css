@@ -1,5 +1,5 @@
 .about {
-  --cluster-gap: var(--space-3xs-3xl, 1rem);
+  --cluster-gap: var(--space-xs, 1rem) var(--space-3xs-3xl, 1rem);
 }
 
 .about__image {
