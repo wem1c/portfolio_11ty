@@ -13,16 +13,31 @@
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
     "DejaVu Sans Mono", monospace;
   text-decoration: none;
+
+  transition-property: box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: var(--easeOutCirc, ease-out);
 }
 
 .logo:hover {
   background-clip: border-box;
   -webkit-background-clip: border-box;
+
   color: var(--color-secondary);
 
   box-shadow: 2px 2px black;
+
+  transform: translate(-2px, -2px);
 }
 
 .logo:active {
   box-shadow: none;
+
+  transform: translate(0px, 0px);
+}
+
+@media (prefers-reduced-motion) {
+  .logo {
+    transition: none;
+  }
 }
