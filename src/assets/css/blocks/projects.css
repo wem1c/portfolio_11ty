@@ -20,6 +20,10 @@
 #project-grid > #project-card {
   border: 2px solid black;
   transform-style: preserve-3d;
+
+  transition-duration: 200ms;
+  transition-timing-function: var(--easeOutCirc, ease-out);
+  transition-property: translate;
 }
 
 /* Drop-shadow */
@@ -29,6 +33,10 @@
   position: absolute;
   transform: translate3d(10px, 8px, -1px);
   background-color: black;
+
+  transition-duration: 200ms;
+  transition-timing-function: var(--easeOutCirc, ease-out);
+  transition-property: transform;
 }
 
 #project-grid > #project-card:hover > a > .project__label {
@@ -38,7 +46,11 @@
 }
 
 #project-grid > #project-card:active {
-  translate: 0px 2px;
+  translate: 8px 8px;
+}
+
+#project-grid > #project-card:active:before {
+  transform: translate3d(0, 0, -1px);
 }
 
 .project__label {
@@ -53,4 +65,11 @@
 
   color: white;
   background-color: #00000075;
+}
+
+@media (prefers-reduced-motion) {
+  #project-grid > #project-card,
+  #project-grid > #project-card::before {
+    transition: none;
+  }
 }
