@@ -1,5 +1,6 @@
 .button {
   --button-color: var(--color-primary, black);
+  --easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
 
   background-color: var(--button-color, white);
   color: var(--color-text, black);
@@ -9,6 +10,12 @@
   box-shadow: 0.25em 0.25em 0px black;
 
   text-decoration: none;
+
+  border: 1px solid transparent;
+
+  transition-property: box-shadow, transform, background-color;
+  transition-duration: 200ms;
+  transition-timing-function: var(--easeOutCirc, ease-out);
 }
 
 .button[button-color="secondary"] {
@@ -21,7 +28,7 @@
 
 /* Tint the background when hovering */
 .button:hover {
-  background-color: color-mix(in oklch, var(--button-color) 100%, white 20%);
+  background-color: color-mix(in oklch, var(--button-color) 100%, white 25%);
 }
 
 /* Shade the background when clicked */
@@ -29,4 +36,44 @@
   background-color: color-mix(in oklch, var(--button-color) 100%, black 4%);
 
   box-shadow: none;
+
+  transform: translate(0.25em, 0.25em);
+}
+
+.button[data-state="active"] {
+  background-color: color-mix(in oklch, var(--color-secondary) 100%, black 4%);
+
+  pointer-events: none;
+
+  border-color: black;
+}
+
+/* VARIANTS: hidden */
+
+.button[button-variant="hidden"] {
+  box-shadow: none;
+}
+
+.button[button-variant="hidden"]:hover {
+  border-color: black;
+
+  transform: translate(-2px, -2px);
+
+  box-shadow: 2px 2px black;
+}
+
+.button[button-variant="hidden"]:active {
+  box-shadow: none;
+
+  border-color: black;
+
+  transform: translate(0px, 0px);
+}
+
+/* Disable transitions if user prefers reduced motion */
+
+@media (prefers-reduced-motion) {
+  .button {
+    transition: none;
+  }
 }

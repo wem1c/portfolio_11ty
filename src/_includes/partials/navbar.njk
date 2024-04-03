@@ -1,5 +1,5 @@
 <nav class="cluster | navbar" data-justify="start">
     {% for item in navigation[locale] %}
-        <a href="{{ item.url }}" hreflang="{{ locale }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+        <a href="{{ item.url }}" hreflang="{{ locale }}" class="button" button-variant="hidden" button-color="secondary" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
     {% endfor %}
 </nav>
