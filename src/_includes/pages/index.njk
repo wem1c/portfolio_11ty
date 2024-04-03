@@ -34,7 +34,7 @@ components: split-flap
         <div id="project-grid" class="flex-grid" data-justify="center">
             {% for project in projects %}
                 <div id="project-card" class="[ relative ]">
-                    <a id="project-link" href="{{ project.url }}">
+                    <a href="{{ project.url }}">
                         <div id="project-image" class="[ frame ]">{% image project.imageSrc, "Website's homepage", ["auto"], "100vw" %}</div>
                         <h3 id="project-label" class="project__label">{{ project.title }}</h3>
                     </a>

@@ -31,7 +31,7 @@
   background-color: black;
 }
 
-#project-grid > #project-card:hover > #project-link > .project__label {
+#project-grid > #project-card:hover > a > .project__label {
   text-decoration: underline;
   background: var(--color-secondary);
   color: var(--color-text);
