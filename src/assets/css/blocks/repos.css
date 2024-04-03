@@ -3,7 +3,15 @@
 }
 
 .repos > header > a {
-  color: var(--color-secondary-light, black);
+  color: black;
+}
+
+.repos > header > a:hover {
+  color: var(--color-secondary, white);
+}
+
+.repos > header > a:active {
+  color: black;
 }
 
 #repo-grid {
