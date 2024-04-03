@@ -22,7 +22,9 @@
 {% block content %}
     <main id="posts" class="box | posts">
         {% if posts | length != 0 %}
-            <ul id="posts-list" class="posts__list" role="list">
+            <ul id="posts-list"
+                class="posts__list | padding-inline-start-none"
+                role="list">
                 {% for post in posts | reverse %}
                     <li>
                         <h3>
