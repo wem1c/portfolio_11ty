@@ -1,6 +1,5 @@
 .button {
   --button-color: var(--color-primary, black);
-  --easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
 
   background-color: var(--button-color, white);
   color: var(--color-text, black);
