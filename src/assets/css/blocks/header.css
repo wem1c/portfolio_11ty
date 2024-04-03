@@ -1,7 +1,0 @@
-.header__items-right {
-  --cluster-gap: var(--space-xs, 0.5rem)
-
-  display: flex;
-
-  gap: 0px var(--space-xs);
-}
