@@ -3,9 +3,13 @@
 
     <small>◝(ᵔᗜᵔ)◜</small>
 
-    <ul class="cluster | list-style-type-none padding-inline-start-none line-height-0 margin-block-0">
+    <ul id="socials"
+        class="cluster | footer__socials | list-style-type-none padding-inline-start-none line-height-0 margin-block-0">
         {% for social in socials %}
-            <li class="button square" button-shape="square" button-color="secondary">
+            <li class="button square"
+                button-shape="square"
+                button-color="background"
+                button-variant="hidden">
                 <a href="{{ social.url }}"
                    aria-label="{{ "Visit my " + social.name + " page." }}">
                     <svg xmlns="http://www.w3.org/2000/svg"
