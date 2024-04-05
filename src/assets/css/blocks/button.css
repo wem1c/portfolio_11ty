@@ -6,13 +6,13 @@
 
   padding: 0.2em 0.4em;
 
-  box-shadow: 0.25em 0.25em 0px black;
+  box-shadow: 0.2em 0.2em 0px black;
 
   text-decoration: none;
 
   border: 1px solid transparent;
 
-  transition-property: box-shadow, transform, background-color;
+  transition-property: box-shadow, transform, background-color, border-color;
   transition-duration: 200ms;
   transition-timing-function: var(--easeOutCirc, ease-out);
 }
@@ -21,8 +21,12 @@
   --button-color: var(--color-secondary, black);
 }
 
+.button[button-color="background"] {
+  --button-color: var(--color-background, black);
+}
+
 .button[button-shape="square"] {
-  padding: 0.25em;
+  padding: 0.2em;
 }
 
 /* Tint the background when hovering */
@@ -36,7 +40,7 @@
 
   box-shadow: none;
 
-  transform: translate(0.25em, 0.25em);
+  transform: translate(0.2em, 0.2em);
 }
 
 .button[data-state="active"] {
@@ -58,7 +62,7 @@
 
   transform: translate(-2px, -2px);
 
-  box-shadow: 2px 2px black;
+  box-shadow: 0.2em 0.2em black;
 }
 
 .button[button-variant="hidden"]:active {
