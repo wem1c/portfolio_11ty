@@ -2,6 +2,10 @@
   border: none;
 }
 
+.posts {
+  min-height: 100svh;
+}
+
 .posts__list {
   list-style-type: none;
 
