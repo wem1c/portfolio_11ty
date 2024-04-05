@@ -6,6 +6,8 @@
   background-color: var(--color-secondary);
 }
 
+/* TODO: replace id's with where possible */
+
 .projects > #project-grid {
   margin-block-start: var(--space-m);
 
@@ -15,6 +17,10 @@
 
 #project-grid {
   --grid-gap: var(--space-m);
+}
+
+#project-card[data-disabled="true"] {
+  pointer-events: none;
 }
 
 #project-grid > #project-card {
