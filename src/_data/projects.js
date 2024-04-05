@@ -1,18 +1,18 @@
 module.exports = [
   {
-    title: "Soon/Ubrzo...",
+    title: "JD",
     url: "#projects",
     imageSrc: "./src/assets/images/projects/in_progress.png",
     disabled: true,
   },
   {
-    title: "Soon/Ubrzo...",
+    title: "Krajevi Kvota",
     url: "#projects",
     imageSrc: "./src/assets/images/projects/in_progress.png",
     disabled: true,
   },
   {
-    title: "Soon/Ubrzo...",
+    title: "Data Technologies",
     url: "#projects",
     imageSrc: "./src/assets/images/projects/in_progress.png",
     disabled: true,
