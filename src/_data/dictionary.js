@@ -18,4 +18,32 @@ module.exports = {
   "coming-soon": { en: "Coming Soon", cnr: "Uskoro" },
   me: { en: "That's me! 👇", cnr: "To sam ja! 👇" },
   "no-posts": { en: "No posts yet!", cnr: "Još nema članaka!" },
+  hero: {
+    en: {
+      first: "Hello there! 👋",
+      second: "I'm",
+      third: "Your friendly neighborhood ",
+      words: "programmer! ⌨️, developer! 💻, engineer! ⚙️, spiderman! 🕷️",
+    },
+    cnr: {
+      first: "Zdravo! 👋",
+      second: "Ja sam",
+      third: "Vaš prijateljski susjedni",
+      words: "programer! ⌨️, developer! 💻, inženjer! ⚙️, spiderman! 🕷️",
+    },
+  },
+  projects: { title: { en: "Latest Projects", cnr: "Najnoviji Projekti" } },
+  repos: {
+    title: { en: "Latest Code", cnr: "Najnoviji Kod" },
+    error: {
+      en: "No repository data received.",
+      cnr: "Podaci o repozitorijumima nisu dobijeni.",
+    },
+    button: { en: "View All", cnr: "Pogledaj sve" },
+  },
+  tech: {
+    used: { en: "Tech I use:", cnr: "Koristim:" },
+    explored: { en: "Tech I'm exploring:", cnr: "Istražujem:" },
+  },
+  soon: { en: "Coming soon...", cnr: "Dolazi ubrzo..." },
 };

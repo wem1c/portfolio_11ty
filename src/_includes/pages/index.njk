@@ -9,18 +9,18 @@ components: split-flap
           class="hero | grid | align-items-center"
           data-justify="around">
         <header>
-            <h1 class="margin-block-start-none">Hello there! 👋</h1>
+            <h1 class="margin-block-start-none">{{ dictionary.hero[locale].first }}</h1>
 
             <br />
 
             <h2>
-                I'm <span class="text-primary">Conor C.</span>,
+                {{ dictionary.hero[locale].second }} <span class="text-primary">Conor C.</span>,
             </h2>
 
             <br />
 
             <h3>
-                Your friendly neighborhood <split-flap-display class="text-primary" data-words="programmer! ⌨️, developer! 💻, engineer! ⚙️, spiderman! 🕷️">programmer</split-flap-display>
+                {{ dictionary.hero[locale].third }} <split-flap-display class="text-primary" data-words="{{ dictionary.hero[locale].words }}">programmer</split-flap-display>
             </h3>
         </header>
 
@@ -34,12 +34,14 @@ components: split-flap
     <section id="projects"
              class="box stack | projects | border-none padding-inline-2xs-3xl">
         <header id="projects-header">
-            <h2 id="projects-title">Latest Projects</h2>
+            <h2 id="projects-title">{{ dictionary.projects.title[locale] }}</h2>
         </header>
 
         <div id="project-grid" class="flex-grid" data-justify="center">
             {% for project in projects %}
-                <div id="project-card" class="[ relative ]">
+                <div id="project-card"
+                     class="relative"
+                     data-disabled="{{ project.disabled }}">
                     <a href="{{ project.url }}"
                        aria-label="{{ "Visit the " + project.title + " website." }}">
                         <div id="project-image" class="[ frame ]">
@@ -57,8 +59,8 @@ components: split-flap
     <section id="repos"
              class="repos | box stack | border-none padding-inline-3xs-3xl">
         <header id="repos-header">
-            <h2 id="repos-title">Latest Code</h2>
-            <a href="https://github.com/wem1c?tab=repositories" class="color-black"><small>View all</small></a>
+            <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
+            <a href="https://github.com/wem1c?tab=repositories" class="color-black"><small>{{ dictionary.repos.button[locale] }}</small></a>
         </header>
 
         <div id="repo-grid"
@@ -74,7 +76,7 @@ components: split-flap
                     </a>
                 {% endfor %}
             {% else %}
-                <p>No repo data found.</p>
+                <p>{{ dictionary.repos.error[locale] }}</p>
             {% endif %}
         </div>
     </section>
