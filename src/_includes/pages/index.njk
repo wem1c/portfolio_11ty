@@ -58,19 +58,19 @@ components: split-flap
 
     <section id="repos"
              class="repos | box stack | border-none padding-inline-3xs-3xl">
-        <header id="repos-header">
+        <header id="repos-header" class="repos__header">
             <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
             <a href="https://github.com/wem1c?tab=repositories" class="color-black"><small>{{ dictionary.repos.button[locale] }}</small></a>
         </header>
 
-        <div id="repo-grid"
-             class="flex-grid | list-style-type-none padding-inline-start-none ]">
+        <div id="repos-grid"
+             class="flex-grid | repos__grid | list-style-type-none padding-inline-start-none ]">
 
             {% if repos.length > 0 %}
                 {% for repo in repos %}
-                    <a href={{ repo.html_url }}>
-                        <div id="repo-card" class="[ relative ]">
-                            <h3 id="repo-name">{{ repo.name }}</h3>
+                    <a href="{{ repo.html_url }}" class="repos__repo-link">
+                        <div id="repo-card" class="relative">
+                            <h3 id="repo-name" class="repos__repo-name">{{ repo.name }}</h3>
                             <p id="repo-desc">{{ repo.description }}</p>
                         </div>
                     </a>
