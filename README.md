@@ -135,6 +135,8 @@ Conor C. Peterson - [@wemic@social.linux.pizza](https://social.linux.pizza/@wemi
 
 ## Acknowledgments
 
+- [Super fast responsive image loading in Eleventy - Eystein Mack Alnæs](https://eystein.no/blog/super-fast-responsive-image-loading-in-eleventy/)
+- [Animated Pride Flags - Josh W Comeau](https://www.joshwcomeau.com/animation/pride-flags/)
 - [11tybundle.dev](https://11tybundle.dev/) - amazing 11ty knowledge base
 - [Choose an open source license](https://choosealicense.com/)
 
