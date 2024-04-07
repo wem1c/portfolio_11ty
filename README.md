@@ -73,6 +73,7 @@ I love that you've decided to browse through it, reader! I tried to make sure an
 ### Built With
 
 - [![11ty][11ty-badge]][11ty-url]
+- [![CubeCSS][cubecss-badge]][cubecss-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,3 +161,5 @@ These sites and the amazing people that made 'em!
 [issues-url]: https://github.com/wem1c/portfolio_11ty/issues
 [11ty-badge]: https://img.shields.io/badge/11ty-000000?style=for-the-badge&logo=eleventy
 [11ty-url]: https://www.11ty.dev/
+[cubecss-badge]: https://img.shields.io/badge/cubecss-BB1E52?style=for-the-badge
+[cubecss-url]: https://cube.fyi/
