@@ -6,7 +6,7 @@
   background-color: var(--color-secondary);
 }
 
-/* TODO: replace id's with where possible */
+/* TODO: replace id's with classes where possible */
 
 .projects > #project-grid {
   margin-block-start: var(--space-m);
