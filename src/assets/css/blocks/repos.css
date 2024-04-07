@@ -27,6 +27,11 @@
   text-decoration: none;
 }
 
+/* TODO: move the a-tag base,hover,active styling
+* to a global link.css since the same styling is
+* used for all links
+*/
+
 .repos__repo-link {
   color: black;
 }
