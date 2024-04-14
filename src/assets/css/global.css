@@ -50,7 +50,7 @@
 
   /* Components */
   --snow-fall-color: #c6fbff;
-  --split-flap-display-color: var(--color-secondary);
+  --split-flap-display-color: var(--color-accent);
 
   /* Timing functions */
   --easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
