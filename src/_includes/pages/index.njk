@@ -14,22 +14,20 @@ components: split-flap
             <br />
 
             <h2>
-                {{ dictionary.hero[locale].second }} <span class="text-primary">Conor C. Peterson</span>,
+                {{ dictionary.hero[locale].second }} <split-flap-display data-words="{{ dictionary.hero[locale].words }}">programmer</split-flap-display>
             </h2>
 
             <br />
 
-            <h3>
-                {{ dictionary.hero[locale].third }} <split-flap-display class="text-primary" data-words="{{ dictionary.hero[locale].words }}">programmer</split-flap-display>
-            </h3>
+            <p>
+                Welcome to my website! You can find some of my <a href="#projects">projects</a> and <a href="#repos">code</a> further down. If you're looking to hire me, you can find my availability and contact info on the <a href="/{{ locale }}/about">about page</a>. You can also find my writing on the <a href="/{{ locale }}/blog">blog page</a>. ℹ️
+            </p>
         </header>
 
         <is-land on:media="(prefers-reduced-motion: no-preference)" class="aspect-3-2">
         <animated-flag columns="10" class="aspect-3-2"></animated-flag>
         </is-land>
     </main>
-
-    <hr />
 
     <section id="projects"
              class="box stack | projects | border-none padding-inline-2xs-3xl">
@@ -53,8 +51,6 @@ components: split-flap
             {% endfor %}
         </div>
     </section>
-
-    <hr />
 
     {# TODO: repos section should separate between original and contributed-to repos. Maybe tagging the individual repos? #}
     <section id="repos"

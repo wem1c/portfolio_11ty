@@ -21,8 +21,7 @@ module.exports = {
   hero: {
     en: {
       first: "Hello there! 👋",
-      second: "I'm",
-      third: "Your friendly neighborhood ",
+      second: "I'm Conor C., your friendly neighborhood ",
       words: "programmer! ⌨️, developer! 💻, engineer! ⚙️, spiderman! 🕷️",
     },
     cnr: {
