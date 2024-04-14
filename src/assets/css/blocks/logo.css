@@ -1,43 +1,42 @@
 .logo {
-  /* Make text color a gradient */
-  background: var(--color-primary);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  inline-size: 48px;
+  block-size: 48px;
 
-  padding: 0 0.25em;
-  margin-block: 0.5rem;
+  color: var(--color-accent);
+}
 
-  font-size: var(--step-3);
-  font-weight: 700;
-  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-    "DejaVu Sans Mono", monospace;
-  text-decoration: none;
+.logo > path {
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
 
-  transition-property: box-shadow, transform;
+  animation: dash 2.5s linear forwards;
+
+  transition-property: color;
+  transition-timing-function: linear;
   transition-duration: 200ms;
-  transition-timing-function: var(--easeOutCirc, ease-out);
 }
 
-.logo:hover {
-  background-clip: border-box;
-  -webkit-background-clip: border-box;
-
-  color: var(--color-secondary);
-
-  box-shadow: 0.2rem 0.2rem black;
-
-  transform: translate(-0.2rem, -0.2rem);
+.logo:hover > path {
+  color: color-mix(in oklab, var(--color-accent) 100%, white 40%);
 }
 
-.logo:active {
-  box-shadow: none;
+.logo:active > path {
+  color: var(--color-accent);
+}
 
-  transform: translate(0px, 0px);
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @media (prefers-reduced-motion) {
-  .logo {
+  .logo > path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+
+    animation: none;
+
     transition: none;
   }
 }

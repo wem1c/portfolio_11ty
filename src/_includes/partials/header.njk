@@ -1,5 +1,12 @@
 <header class="cluster">
-    <a href="/{{ locale }}/" class="logo">C^2</a>
+    <a href="/{{ locale }}/" class="line-height-0">
+        <svg class="logo" viewBox="-1 -1 12 12">
+            <path class="path" fill="none" stroke="currentColor" d="M 7,3 H 3 V 7 H 7" />
+            <path class="path" fill="none" stroke="currentColor" d="M 0,0 V 10 H 10.5" />
+            <path class="path" fill="none" stroke="currentColor" d="M 10,10 V 0 H -0.5" />
+        </svg>
+    </a>
+
     <div id="container" class="cluster | header__items-right">
         {% include "partials/navbar.njk" %}
         {% include "partials/language-picker.njk" %}

@@ -1,0 +1,9 @@
+body > header {
+  --cluster-gap: var(--space-xs);
+
+  padding-block: var(--space-xs);
+}
+
+.header__items-right {
+  --cluster-gap: var(--space-l);
+}
