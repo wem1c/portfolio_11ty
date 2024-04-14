@@ -1,0 +1,24 @@
+.navbar {
+  --cluster-gap: var(--space-s);
+}
+
+.navbar > a {
+  min-inline-size: 48px;
+  min-block-size: 48px;
+
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 150ms ease-out;
+}
+
+.navbar > a:hover {
+  color: var(--color-accent);
+}
+
+.navbar > a:active {
+  color: var(--color-text);
+}
