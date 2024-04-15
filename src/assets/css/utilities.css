@@ -106,6 +106,10 @@
   color: color-mix(in oklch, var(--color-secondary) 100%, black 40%);
 }
 
+.text-accent-dark {
+  color: color-mix(in oklch, var(--color-accent) 100%, black 15%);
+}
+
 .text-shadow {
   text-shadow: 1px 1px 0px var(--color-text);
 }
