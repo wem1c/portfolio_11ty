@@ -1,7 +1,7 @@
 .hero {
   --grid-gap: var(--space-2xl);
 
-  padding-block: var(--space-xl-2xl);
+  padding-block: var(--space-xl-2xl) var(--space-2xl-3xl);
 }
 
 .hero > :first-child {
