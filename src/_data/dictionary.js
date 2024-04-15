@@ -26,8 +26,7 @@ module.exports = {
     },
     cnr: {
       first: "Zdravo! 👋",
-      second: "Ja sam",
-      third: "Vaš prijateljski susjedni",
+      second: "Ja sam Conor C., vaš prijateljski susjedni ",
       words: "programer! ⌨️, developer! 💻, inženjer! ⚙️, spiderman! 🕷️",
     },
   },
