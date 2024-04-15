@@ -40,9 +40,9 @@
   transition-property: transform;
 }
 
-.projects__card:hover > a > .project__label {
+.projects__card:hover .project__label {
   text-decoration: underline;
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--color-text);
 }
 
