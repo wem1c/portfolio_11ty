@@ -24,8 +24,6 @@
 }
 
 .navbar > a[data-state="active"] {
-  color: var(--color-accent);
-
   text-decoration: underline;
   text-underline-offset: 0.4em;
 }
