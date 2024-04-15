@@ -18,3 +18,7 @@
   color: var(--color-background);
   background-color: var(--color-text);
 }
+
+.box[box-background="primary"] {
+  background-color: var(--color-primary);
+}
