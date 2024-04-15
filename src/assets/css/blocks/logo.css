@@ -5,7 +5,7 @@
   color: var(--color-accent);
 }
 
-.logo > path {
+.logo__path {
   stroke-dasharray: 25;
   stroke-dashoffset: 25;
 
@@ -16,11 +16,15 @@
   transition-duration: 150ms;
 }
 
-.logo:hover > path {
+.logo__path.animation-fast {
+  animation-duration: 1.5s;
+}
+
+.logo__path:hover {
   color: color-mix(in oklab, var(--color-accent) 100%, white 40%);
 }
 
-.logo:active > path {
+.logo__path:active {
   color: var(--color-accent);
 }
 
@@ -31,7 +35,7 @@
 }
 
 @media (prefers-reduced-motion) {
-  .logo > path {
+  .logo__path {
     stroke-dasharray: 0;
     stroke-dashoffset: 0;
 
