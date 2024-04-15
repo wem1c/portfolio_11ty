@@ -1,16 +1,14 @@
 .projects {
-  --box-padding: var(--space-m);
-}
+  --box-padding: var(--space-m) var(--space-m) var(--space-2xl-3xl)
+    var(--space-m);
+  --stack-gap: var(--space-l);
 
-#projects {
   background-color: var(--color-primary);
 }
 
 /* TODO: replace id's with classes where possible */
 
 .projects > #project-grid {
-  margin-block-start: var(--space-m);
-
   /* Account for project-card::before drop shadow */
   padding-inline-end: 8px;
 }
