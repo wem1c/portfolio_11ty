@@ -11,7 +11,7 @@
 
 .stack > * + * {
   /* ↓ Top margin is only applied to successive elements */
-  margin-block-start: var(--space-m, 1.5rem);
+  margin-block-start: var(--stack-gap, 1.5rem);
 }
 
 .stack[data-align="center"] {
