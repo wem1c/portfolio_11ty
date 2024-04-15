@@ -6,8 +6,9 @@ components: split-flap
 
 {% block content %}
     <main id="hero"
-          class="hero | grid | align-items-center"
-          data-justify="around">
+          class="hero | grid wave-container | align-items-center"
+          data-justify="around"
+          wave-color="primary">
         <header>
             <h1 class="margin-block-start-none">{{ dictionary.hero[locale].first }}</h1>
 
@@ -30,7 +31,9 @@ components: split-flap
     </main>
 
     <section id="projects"
-             class="box stack | projects | border-none padding-inline-2xs-3xl">
+             class="projects | box stack wave-container | border-none padding-inline-2xs-3xl"
+             box-background="primary">
+
         <header id="projects-header">
             <h2 id="projects-title">{{ dictionary.projects.title[locale] }}</h2>
         </header>
