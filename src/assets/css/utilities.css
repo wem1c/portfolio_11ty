@@ -107,7 +107,7 @@
 }
 
 .text-accent-dark {
-  color: color-mix(in oklch, var(--color-accent) 100%, black 15%);
+  color: var(--color-accent-dark);
 }
 
 .text-shadow {

@@ -62,6 +62,7 @@
   --color-primary: oklch(84.88% 0.146 125.27);
   --color-secondary: oklch(79.12% 0.153 75.35);
   --color-accent: oklch(74.84% 0.128 194.77);
+  --color-accent-dark: color-mix(in oklch, var(--color-accent) 100%, black 40%);
 }
 
 :root[data-theme="dark"] {
