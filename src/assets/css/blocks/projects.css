@@ -5,14 +5,12 @@
   background-color: var(--color-primary);
 }
 
-/* TODO: replace id's with classes where possible */
-
-.projects > #project-grid {
+.projects__grid {
   /* Account for project-card::before drop shadow */
   padding-inline-end: 8px;
 }
 
-#project-grid {
+.projects__grid {
   --grid-gap: var(--space-m);
 }
 
@@ -20,7 +18,7 @@
   pointer-events: none;
 }
 
-#project-grid > #project-card {
+.projects__card {
   border: 2px solid black;
   transform-style: preserve-3d;
 
@@ -30,7 +28,7 @@
 }
 
 /* Drop-shadow */
-#project-grid > #project-card::before {
+.projects__card::before {
   content: "";
   inset: 0;
   position: absolute;
@@ -42,17 +40,17 @@
   transition-property: transform;
 }
 
-#project-grid > #project-card:hover > a > .project__label {
+.projects__card:hover > a > .project__label {
   text-decoration: underline;
   background: var(--color-secondary);
   color: var(--color-text);
 }
 
-#project-grid > #project-card:active {
+.projects__card:active {
   translate: 8px 8px;
 }
 
-#project-grid > #project-card:active:before {
+.projects__card:active:before {
   transform: translate3d(0, 0, -1px);
 }
 
@@ -71,8 +69,8 @@
 }
 
 @media (prefers-reduced-motion) {
-  #project-grid > #project-card,
-  #project-grid > #project-card::before {
+  .projects__grid > #project-card,
+  .projects__grid > #project-card::before {
     transition: none;
   }
 }

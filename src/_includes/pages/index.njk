@@ -34,13 +34,15 @@ components: split-flap
              box-background="primary">
 
         <header id="projects-header">
-            <h2 id="projects-title">{{ dictionary.projects.title[locale] }}</h2>
+            <h2 id="projects-title" class="margin-block-start-none">{{ dictionary.projects.title[locale] }}</h2>
         </header>
 
-        <div id="project-grid" class="flex-grid" data-justify="center">
+        <div id="project-grid"
+             class="projects__grid | flex-grid"
+             data-justify="center">
             {% for project in projects %}
                 <div id="project-card"
-                     class="relative"
+                     class="projects__card | relative"
                      data-disabled="{{ project.disabled }}">
                     <a href="{{ project.url }}"
                        aria-label="{{ "Visit the " + project.title + " website." }}">
