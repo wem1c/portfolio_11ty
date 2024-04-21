@@ -1,5 +1,6 @@
 module.exports = {
   en: [
+    { text: "Home", url: "/en/" },
     {
       text: "About",
       url: "/en/about/",
@@ -10,6 +11,7 @@ module.exports = {
     },
   ],
   cnr: [
+    { text: "Indeks", url: "/cnr/" },
     {
       text: "O meni",
       url: "/cnr/about/",
