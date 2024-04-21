@@ -1,9 +1,13 @@
-body > header {
-  --cluster-gap: var(--space-xs);
+.header {
+  display: grid;
+  grid-auto-flow: column dense;
+  gap: var(--space-xs);
+  align-items: center;
+  place-content: space-between;
 
   padding-block: var(--space-xs);
 }
 
-.header__items-right {
-  --cluster-gap: var(--space-l);
+.header__link:hover > .logo {
+  color: color-mix(in oklab, var(--color-accent) 100%, white 40%);
 }

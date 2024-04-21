@@ -1,6 +1,6 @@
-<header class="cluster">
+<header class="header">
     <a href="/{{ locale }}/"
-       class="line-height-0"
+       class="header__link | line-height-0"
        aria-label="C-Squared logo link">
         <svg class="logo" viewBox="-1 -1 12 12">
             <path class="logo__path" fill="none" stroke="currentColor" d="M 7,3 H 3 V 7 H 7" />
@@ -9,8 +9,7 @@
         </svg>
     </a>
 
-    <div id="container" class="cluster | header__items-right">
-        {% include "partials/navbar.njk" %}
-        {% include "partials/language-picker.njk" %}
-    </div>
+    {% include "partials/navbar.njk" %}
+
+    {% include "partials/language-picker.njk" %}
 </header>

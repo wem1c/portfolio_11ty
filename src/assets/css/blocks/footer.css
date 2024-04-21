@@ -1,8 +1,22 @@
-footer {
+.footer {
+  --cluster-gap: var(--space-xs);
+
+  display: grid;
+  grid-auto-flow: column dense;
+  align-items: center;
+  place-content: space-between;
+  gap: var(--space-m-l);
+
   position: relative;
   bottom: 0;
 
   padding-block: var(--space-xs);
 
   color: var(--color-text-light);
+}
+
+.footer__socials {
+  width: fit-content;
+
+  color: var(--color-accent);
 }
