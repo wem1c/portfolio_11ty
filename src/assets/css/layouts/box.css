@@ -6,8 +6,8 @@
   outline: var(--border-thin) transparent;
   outline-offset: calc(var(--border-thin) * -1);
 
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: var(--box-text, --color-text);
+  background-color: var(--box-background, --color-background);
 }
 
 .box > * {
@@ -15,10 +15,6 @@
 }
 
 .box.invert {
-  color: var(--color-background);
-  background-color: var(--color-text);
-}
-
-.box[box-background="primary"] {
-  background-color: var(--color-primary);
+  color: var(--box-background, --color-background);
+  background-color: var(--box-text, --color-text);
 }
