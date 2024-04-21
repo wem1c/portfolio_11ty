@@ -20,10 +20,6 @@
   animation-duration: 1.5s;
 }
 
-.logo__path:hover {
-  color: color-mix(in oklab, var(--color-accent) 100%, white 40%);
-}
-
 .logo__path:active {
   color: var(--color-accent);
 }
