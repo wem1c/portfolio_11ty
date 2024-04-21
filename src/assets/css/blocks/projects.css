@@ -1,8 +1,9 @@
 .projects {
   --box-padding: var(--space-xl) var(--space-m);
+  --box-background: var(--color-primary);
   --stack-gap: var(--space-l);
 
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
 }
 
 .projects__grid {
