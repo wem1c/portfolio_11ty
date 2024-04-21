@@ -7,7 +7,7 @@
 }
 
 .repos__header > a:hover {
-  color: var(--color-secondary, white);
+  color: var(--color-accent, white);
 }
 
 .repos__header > a:active {
@@ -37,7 +37,7 @@
 }
 
 .repos__repo-link:hover {
-  color: var(--color-secondary, white);
+  color: var(--color-accent, white);
 }
 
 .repos__repo-link:active {
