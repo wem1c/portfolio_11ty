@@ -61,7 +61,7 @@
   --color-background: oklch(97.33% 0.027 90.9);
   --color-primary: oklch(84.88% 0.146 125.27);
   --color-secondary: oklch(79.12% 0.153 75.35);
-  --color-accent: oklch(74.84% 0.128 194.77);
+  --color-accent: oklch(59% 0.28 338.41);
   --color-accent-dark: color-mix(in oklch, var(--color-accent) 100%, black 40%);
 }
 
@@ -98,4 +98,21 @@ a {
 
 article {
   max-width: 75ch;
+}
+
+p a {
+  text-decoration-color: var(--color-accent);
+
+  transition: color 0.15s;
+}
+
+p a:hover {
+  color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion) {
+  body * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
