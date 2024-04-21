@@ -6,6 +6,8 @@
   min-inline-size: 48px;
   min-block-size: 48px;
 
+  padding-inline: 0.2rem;
+
   text-decoration: none;
 
   display: inline-flex;
