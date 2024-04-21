@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.cluster[data-justify="around"] {
+  justify-content: space-around;
+}
+
 .cluster[data-justify="center"] {
   justify-content: center;
 }
@@ -14,12 +18,12 @@
   justify-content: flex-end;
 }
 
-.cluster[data-justify="start"] {
-  justify-content: flex-start;
+.cluster[data-justify="evenly"] {
+  justify-content: space-evenly;
 }
 
-.cluster[data-justify="around"] {
-  justify-content: space-around;
+.cluster[data-justify="start"] {
+  justify-content: flex-start;
 }
 
 .cluster[data-align="flex-start"] {
