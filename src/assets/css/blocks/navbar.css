@@ -28,4 +28,8 @@
 .navbar > a[data-state="active"] {
   text-decoration: underline;
   text-underline-offset: 0.4em;
+
+  color: color-mix(in oklab, var(--color-text) 100%, white 100%);
+
+  pointer-events: none;
 }
