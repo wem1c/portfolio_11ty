@@ -2,15 +2,23 @@
   --cluster-gap: var(--space-xs, 1rem) var(--space-3xs-3xl, 1rem);
 }
 
-.about__image {
+.about__contact {
   max-width: min(100vw, 40ch);
 
   margin-block: var(--space-s, 1rem);
 }
 
-#about__image > .image-container {
+.about__contact > small {
+  color: var(--color-text-light);
+}
+
+.about__contact > .frame {
   --n: 1;
   --d: 1;
+}
+
+.about__contact > .button {
+  --button-background: var(--color-primary);
 }
 
 .about__bio {
