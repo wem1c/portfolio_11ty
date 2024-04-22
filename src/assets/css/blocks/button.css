@@ -1,8 +1,6 @@
 .button {
-  --button-color: var(--color-primary, black);
-
-  background-color: var(--button-color, white);
-  color: var(--color-text, black);
+  background-color: var(--button-background, inherit);
+  color: var(--button-text, inherit);
 
   padding: 0.2em 0.4em;
 
@@ -17,26 +15,26 @@
   transition-timing-function: var(--easeOutCirc, ease-out);
 }
 
-.button[button-color="secondary"] {
-  --button-color: var(--color-secondary, black);
-}
-
-.button[button-color="background"] {
-  --button-color: var(--color-background, black);
-}
-
 .button[button-shape="square"] {
   padding: 0.2em;
 }
 
 /* Tint the background when hovering */
 .button:hover {
-  background-color: color-mix(in oklch, var(--button-color) 100%, white 25%);
+  background-color: color-mix(
+    in oklch,
+    var(--button-background, inherit) 100%,
+    white 25%
+  );
 }
 
 /* Shade the background when clicked */
 .button:active {
-  background-color: color-mix(in oklch, var(--button-color) 100%, black 4%);
+  background-color: color-mix(
+    in oklch,
+    var(--button-background, inherit) 100%,
+    black 4%
+  );
 
   box-shadow: none;
 
@@ -44,7 +42,11 @@
 }
 
 .button[data-state="active"] {
-  background-color: color-mix(in oklch, var(--color-secondary) 100%, black 4%);
+  background-color: color-mix(
+    in oklch,
+    var(--button-background, inherit) 100%,
+    black 4%
+  );
 
   pointer-events: none;
 
