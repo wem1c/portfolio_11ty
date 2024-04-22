@@ -16,7 +16,8 @@
 }
 
 .footer__socials {
-  width: fit-content;
+  --button-background: var(--color-background);
+  --button-text: var(--color-text-light);
 
-  color: var(--color-accent);
+  width: fit-content;
 }
