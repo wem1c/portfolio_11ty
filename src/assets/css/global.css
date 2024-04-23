@@ -96,20 +96,18 @@ body > hr {
 
 a {
   text-underline-offset: 0.2em;
-}
 
-article {
-  max-width: 75ch;
-}
-
-p a {
   text-decoration-color: var(--color-accent);
 
   transition: color 0.15s;
 }
 
-p a:hover {
+a:hover {
   color: var(--color-accent);
+}
+
+article {
+  max-width: 75ch;
 }
 
 @media (prefers-reduced-motion) {
