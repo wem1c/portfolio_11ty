@@ -94,7 +94,7 @@ body > hr {
   margin: 0;
 }
 
-a {
+a:not(.button) {
   text-underline-offset: 0.2em;
 
   text-decoration-color: var(--color-accent);
@@ -102,7 +102,7 @@ a {
   transition: color 0.15s;
 }
 
-a:hover {
+a:not(.button):hover {
   color: var(--color-accent);
 }
 
