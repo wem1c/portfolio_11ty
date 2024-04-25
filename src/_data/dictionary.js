@@ -23,11 +23,13 @@ module.exports = {
       first: "Hello there! 👋",
       second: "I'm Conor C., your friendly neighborhood ",
       words: "programmer! ⌨️, developer! 💻, engineer! ⚙️, spiderman! 🕷️",
+      words_fallback: "programmer! ⌨️",
     },
     cnr: {
       first: "Zdravo! 👋",
       second: "Ja sam Conor C., vaš prijateljski susjedni ",
       words: "programer! ⌨️, developer! 💻, inženjer! ⚙️, spiderman! 🕷️",
+      words_fallback: "programer! ⌨️",
     },
   },
   projects: { title: { en: "Latest Projects", cnr: "Najnoviji Projekti" } },
