@@ -31,8 +31,13 @@
             <header>
                 <h2>{{ dictionary.tech.enjoying[locale] }}</h2>
             </header>
-            <ul>
-                <li>{{ dictionary.soon[locale] }}</li>
+            <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
+                data-justify="start">
+                {% for tech in tech.enjoying %}
+                    <li class="tech__item">
+                        <a href="{{ tech.url }}">{{ tech.name }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
 
@@ -40,8 +45,13 @@
             <header>
                 <h2>{{ dictionary.tech.explored[locale] }}</h2>
             </header>
-            <ul>
-                <li>{{ dictionary.soon[locale] }}</li>
+            <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
+                data-justify="start">
+                {% for tech in tech.exploring %}
+                    <li class="tech__item">
+                        <a href="{{ tech.url }}">{{ tech.name }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
