@@ -1,7 +1,7 @@
 const githubAccount = "wem1c";
 
 module.exports = async function () {
-  const repoURL = `https://api.github.com/users/${githubAccount}/repos?sort=updated`;
+  const repoURL = `https://api.github.com/users/${githubAccount}/repos?visibility=public&affiliation=owner&sort=pushed`;
   let result = [];
 
   if (process.env.CURR_ENV === "dev") {
@@ -31,5 +31,7 @@ module.exports = async function () {
       console.error(`\nError: ${response.status} - ${response.statusText}\n`);
   }
 
-  return result;
+  let filteredResult = result.filter((repo, _index) => repo.archived === false);
+
+  return filteredResult;
 };
