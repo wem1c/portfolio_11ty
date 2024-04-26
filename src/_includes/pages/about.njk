@@ -26,11 +26,13 @@
 
     <hr />
 
-    <section id="tech" class="box | border-none padding-inline-2xs-3xl">
-        <div>
+    {# TODO: categorize tech and add filtering #}
+    <section id="tech" class="tech | box | border-none padding-inline-2xs-3xl">
+        <article class="max-width-full">
             <header>
                 <h2>{{ dictionary.tech.enjoying[locale] }}</h2>
             </header>
+
             <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
                 data-justify="start">
                 {% for tech in tech.enjoying %}
@@ -39,12 +41,13 @@
                     </li>
                 {% endfor %}
             </ul>
-        </div>
+        </article>
 
-        <div>
+        <article class="max-width-full">
             <header>
                 <h2>{{ dictionary.tech.explored[locale] }}</h2>
             </header>
+
             <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
                 data-justify="start">
                 {% for tech in tech.exploring %}
@@ -53,6 +56,6 @@
                     </li>
                 {% endfor %}
             </ul>
-        </div>
+        </article>
     </section>
 {% endblock content %}

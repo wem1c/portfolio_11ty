@@ -1,0 +1,31 @@
+.tech > * ~ * {
+  margin-block-start: var(--space-xl);
+}
+
+.tech__list {
+  --cluster-gap: var(--space-xs);
+
+  margin-block-start: var(--space-m);
+}
+
+.tech__item {
+  border: 1px solid var(--color-text);
+  border-radius: 0.2em;
+
+  background-color: var(--color-background-dark);
+
+  transition-property: background-color;
+  transition-duration: 0.15s;
+}
+
+.tech__item > a {
+  display: inline-block;
+
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+}
+
+.tech__item:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-accent);
+}
