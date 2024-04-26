@@ -1,20 +1,22 @@
 .repos {
-  --box-padding: var(--space-m);
+  --box-padding: var(--space-m) var(--space-2xs-3xl);
+  --stack-gap: var(--space-l);
 }
 
 .repos__grid {
-  --ideal: 55ch;
+  --ideal: 60ch;
   --max: 75ch;
   --grid-gap: var(--space-l);
-
-  margin-block-start: var(--space-m);
 }
 
 .repos__repo-link {
+  color: var(--color-text);
   text-decoration: none;
 }
 
 .repos__repo-name {
   text-decoration: underline;
   text-underline-offset: 0.3em;
+  line-height: 1.5;
+  margin-block-start: 0;
 }

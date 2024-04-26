@@ -55,16 +55,14 @@ components: split-flap
         </div>
     </section>
 
-    {# TODO: repos section should separate between original and contributed-to repos. Maybe tagging the individual repos? #}
-    <section id="repos"
-             class="repos | box stack | border-none padding-inline-3xs-3xl">
+    <section id="repos" class="repos | box stack | border-none">
         <header id="repos-header" class="repos__header">
             <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
             <a href="https://github.com/wem1c?tab=repositories" class="color-black"><small>{{ dictionary.repos.button[locale] }}</small></a>
         </header>
 
         <div id="repos-grid"
-             class="flex-grid | repos__grid | list-style-type-none padding-inline-start-none ]">
+             class="flex-grid | repos__grid | list-style-type-none">
 
             {% if repos.length > 0 %}
                 {% for repo in repos %}
