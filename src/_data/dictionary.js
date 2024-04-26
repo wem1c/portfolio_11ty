@@ -42,7 +42,7 @@ module.exports = {
     button: { en: "View All", cnr: "Pogledaj sve" },
   },
   tech: {
-    used: { en: "Tech I use:", cnr: "Koristim:" },
+    enjoying: { en: "Tech I'm enjoying:", cnr: "Koristim:" },
     explored: { en: "Tech I'm exploring:", cnr: "Istražujem:" },
   },
   soon: { en: "Coming soon...", cnr: "Dolazi ubrzo..." },
