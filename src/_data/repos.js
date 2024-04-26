@@ -31,7 +31,15 @@ module.exports = async function () {
       console.error(`\nError: ${response.status} - ${response.statusText}\n`);
   }
 
-  let filteredResult = result.filter((repo, _index) => repo.archived === false);
+  let filteredResult = result
+    .filter((repo, _index) => repo.archived === false)
+    .map((repo, _index) => {
+      if (repo.description === null) {
+        repo.description = "No description provided.";
+      }
+
+      return repo;
+    });
 
   return filteredResult;
 };
