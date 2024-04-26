@@ -2,18 +2,6 @@
   --box-padding: var(--space-m);
 }
 
-.repos__header > a {
-  color: black;
-}
-
-.repos__header > a:hover {
-  color: var(--color-accent, white);
-}
-
-.repos__header > a:active {
-  color: black;
-}
-
 .repos__grid {
   --ideal: 55ch;
   --max: 75ch;
@@ -22,28 +10,11 @@
   margin-block-start: var(--space-m);
 }
 
-.repos__grid > a {
-  color: black;
-  text-decoration: none;
-}
-
-/* TODO: move the a-tag base,hover,active styling
-* to a global link.css since the same styling is
-* used for all links
-*/
-
 .repos__repo-link {
-  color: black;
-}
-
-.repos__repo-link:hover {
-  color: var(--color-accent, white);
-}
-
-.repos__repo-link:active {
-  color: black;
+  text-decoration: none;
 }
 
 .repos__repo-name {
   text-decoration: underline;
+  text-underline-offset: 0.3em;
 }
