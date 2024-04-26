@@ -129,3 +129,7 @@
 .underline-none {
   text-decoration: none;
 }
+
+.max-width-full {
+  max-width: 100%;
+}
