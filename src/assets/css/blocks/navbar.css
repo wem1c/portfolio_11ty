@@ -1,5 +1,5 @@
 .navbar {
-  --cluster-gap: var(--space-s);
+  --cluster-gap: var(--space-3xs) var(--space-s);
 }
 
 .navbar > a {
