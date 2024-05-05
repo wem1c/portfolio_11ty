@@ -16,8 +16,16 @@ module.exports = {
     ],
   },
   "coming-soon": { en: "Coming Soon", cnr: "Uskoro" },
-  me: { en: "That's me! 👇", cnr: "To sam ja! 👇" },
-  "no-posts": { en: "No posts yet!", cnr: "Još nema članaka!" },
+  feeds: {
+    title: {
+      en: "My blog about anything and everything!",
+      cnr: "Moj blog o svemu i svačemu!",
+    },
+    subtitle: {
+      en: "I write about my work, Web Development, and stuff I research in general.",
+      cnr: "Pišem o svome poslu, veb developmentu, kao i raznim stvarima koje istražim na internetu.",
+    },
+  },
   hero: {
     en: {
       first: "Hello there! 👋",
@@ -32,6 +40,8 @@ module.exports = {
       words_fallback: "programer! ⌨️",
     },
   },
+  me: { en: "That's me! 👇", cnr: "To sam ja! 👇" },
+  "no-posts": { en: "No posts yet!", cnr: "Još nema članaka!" },
   projects: { title: { en: "Latest Projects", cnr: "Najnoviji Projekti" } },
   repos: {
     title: { en: "Latest Code", cnr: "Najnoviji Kod" },
@@ -41,9 +51,9 @@ module.exports = {
     },
     button: { en: "View All", cnr: "Pogledaj sve" },
   },
+  soon: { en: "Coming soon...", cnr: "Dolazi ubrzo..." },
   tech: {
     enjoying: { en: "Tech I'm enjoying:", cnr: "Uživam koristeći:" },
     explored: { en: "Tech I'm exploring:", cnr: "Istražujem:" },
   },
-  soon: { en: "Coming soon...", cnr: "Dolazi ubrzo..." },
 };
