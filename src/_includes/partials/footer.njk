@@ -6,7 +6,7 @@
     <ul id="socials"
         class="footer__socials | cluster"
         data-justify="evenly">
-        {% for social in socials %}
+        {%- for social in socials %}
             <li>
                 <a href="{{ social.url }}"
                    aria-label="{{ "Visit my " + social.name + " page." }}"
@@ -23,7 +23,7 @@
                     </svg>
                 </a>
             </li>
-        {% endfor %}
+        {% endfor -%}
     </ul>
 
 </footer>

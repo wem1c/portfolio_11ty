@@ -1,8 +1,8 @@
-{% if locale === "en" %}
+{%- if locale === "en" %}
     <a id="language-picker"
        href="{{ page.url | locale_url('en', 'cnr') }}"
        class="language-picker">🇺🇸</a>
-{% else %}
+{%- else %}
     <a id="language-picker"
        href="{{ page.url | locale_url('cnr', 'en') }}"
        class="language-picker">🇲🇪</a>
