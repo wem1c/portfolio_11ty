@@ -23,7 +23,7 @@
 .button:hover {
   background-color: color-mix(
     in oklch,
-    var(--button-background, inherit) 100%,
+    var(--button-background, inherit),
     white 25%
   );
 }
@@ -32,8 +32,8 @@
 .button:active {
   background-color: color-mix(
     in oklch,
-    var(--button-background, inherit) 100%,
-    black 4%
+    var(--button-background, inherit),
+    black 5%
   );
 
   box-shadow: none;
@@ -44,8 +44,8 @@
 .button[data-state="active"] {
   background-color: color-mix(
     in oklch,
-    var(--button-background, inherit) 100%,
-    black 4%
+    var(--button-background, inherit),
+    black 5%
   );
 
   pointer-events: none;

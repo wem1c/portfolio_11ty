@@ -1,0 +1,14 @@
+{
+  "permalink": "/{{ locale }}/feeds/{{ page.fileSlug }}.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Moj blog o svemu i svačemu!",
+    "subtitle": "Pišem o svome poslu, veb developmentu, kao i raznim stvarima koje istražim na internetu.",
+    "language": "cnr",
+    "url": "https://conor.zone/",
+    "author": {
+      "name": "Conor C. Peterson",
+      "email": "conorpetersondev@gmail.com"
+    }
+  }
+}

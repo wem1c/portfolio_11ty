@@ -4,15 +4,16 @@
     <small>◝(ᵔᗜᵔ)◜</small>
 
     <ul id="socials"
-        class="footer__socials | cluster | list-style-type-none padding-inline-start-none line-height-0 margin-block-0"
+        class="footer__socials | cluster"
         data-justify="evenly">
         {% for social in socials %}
-            <li class="button square"
-                button-shape="square"
-                button-color="background"
-                button-variant="hidden">
+            <li>
                 <a href="{{ social.url }}"
-                   aria-label="{{ "Visit my " + social.name + " page." }}">
+                   aria-label="{{ "Visit my " + social.name + " page." }}"
+                   class="button square | display-inline-block"
+                   button-shape="square"
+                   button-color="background"
+                   button-variant="hidden">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24"
                          fill="currentColor"

@@ -20,4 +20,9 @@
   --button-text: var(--color-text-light);
 
   width: fit-content;
+
+  list-style-type: none;
+  padding-inline-start: 0;
+  line-height: 0;
+  margin-block: 0;
 }
