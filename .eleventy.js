@@ -2,8 +2,14 @@ const CleanCSS = require("clean-css");
 const fastGlob = require("fast-glob");
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
+  /**
+   * PLUGINS
+   */
+  eleventyConfig.addPlugin(pluginRss);
+
   /**
    * FILTERS
    */
