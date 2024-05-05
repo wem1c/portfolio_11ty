@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        {% set pageTitle = title + ' - ' + site.name %}
+        {%- set pageTitle = title + ' - ' + site.name %}
 
         <title>{{ pageTitle }}</title>
 
-        {% if not metaDesc %}
-            {% set metaDesc = summary %}
-        {% endif %}
+        {%- if not metaDesc %}
+            {%- set metaDesc = summary %}
+        {% endif -%}
 
         <meta name="description" content="{{ metaDesc }}" />
         <meta name="twitter:description" content="{{ metaDesc }}" />
@@ -22,7 +22,9 @@
         <meta name="generator" content="Eleventy" />
         <meta name="author" content="Conor C. Peterson" />
 
-        {% set currentUrl = site.url + page.url %}
+        {#- Get current url by concatenating the canonical site url and the curent page url #}
+        {#- Remove one instance of "/" from the start of page.url to prevent doubling #}
+        {% set currentUrl = site.url + page.url | replace("/", "", 1) -%}
 
         <link rel="canonical" href="{{ currentUrl }}" />
 
@@ -32,7 +34,7 @@
         <meta property="og:url" content="{{ currentUrl }}" />
         <meta property="og:site_name" content="{{ site.name }}" />
 
-        {% if socialImage %}
+        {%- if socialImage %}
             <meta property="og:image" content="{{ socialImage }}" />
             <meta property="og:image:alt" content="Page image for {{ site.name }}" />
             <meta name="twitter:card" content="summary_large_image" />
@@ -61,16 +63,16 @@
     </head>
 
     <body>
-        {% include "partials/header.njk" %}
+        {% include "partials/header.njk" -%}
         <hr />
-        {% block content %}
+        {%- block content %}
         {% endblock content %}
         <hr />
-        {% include "partials/footer.njk" %}
+        {% include "partials/footer.njk" -%}
     </body>
 
     <script type="module" src="/assets/js/is-land.js" async></script>
     <script type="module" src="/assets/js/animated-flag.js" async></script>
 
-    {% if components %}<script type="module" src="/assets/js/{{components}}.js" async></script>{% endif %}
+    {%- if components %}<script type="module" src="/assets/js/{{components}}.js" async></script>{% endif %}
 </html>
