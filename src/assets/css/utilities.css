@@ -20,6 +20,10 @@
   border: none !important;
 }
 
+.display-inline-block {
+  display: inline-block;
+}
+
 .font-normal {
   font-weight: normal;
 }
