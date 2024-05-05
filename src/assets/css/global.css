@@ -113,6 +113,17 @@ a:not(.button):hover {
   color: var(--color-accent);
 }
 
+a:not(.button):has(svg) {
+  display: inline-flex;
+  gap: 0.2em;
+  align-items: center;
+  vertical-align: text-bottom;
+}
+
+a:not(.button):has(svg) > svg {
+  color: var(--color-accent);
+}
+
 article {
   max-width: 75ch;
 }
