@@ -25,6 +25,12 @@ devDependencies:
   '@11ty/eleventy-plugin-rss':
     specifier: ^1.2.0
     version: 1.2.0
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
+  prettier-plugin-jinja-template:
+    specifier: ^1.4.0
+    version: 1.4.0(prettier@3.2.5)
 
 packages:
 
@@ -1352,6 +1358,20 @@ packages:
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
     dev: false
+
+  /prettier-plugin-jinja-template@1.4.0(prettier@3.2.5):
+    resolution: {integrity: sha512-9i7HwTAryhOTtY1ENyZBZA+KNaPphSaI/sXbQno5a6/DgiP6ZAnUiax4cOKiutEwiSDhVfLbTXEfHS5QAUVWBg==}
+    peerDependencies:
+      prettier: ^3.0.0
+    dependencies:
+      prettier: 3.2.5
+    dev: true
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /promise-each@2.2.0:
     resolution: {integrity: sha512-67roqt1k3QDA41DZ8xi0V+rF3GoaMiX7QilbXu0vXimut+9RcKBNZ/t60xCRgcsihmNUsEjh48xLfNqOrKblUg==}
