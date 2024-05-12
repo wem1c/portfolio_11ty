@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
       widths,
       sizes = "100vw",
       loading = "lazy",
-      decoding = "async"
+      decoding = "async",
     ) {
       let metadata = await Image(src, {
         widths: widths,
@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
       };
 
       return Image.generateHTML(metadata, imageAttributes);
-    }
+    },
   );
 
   /* Nunjucks */
@@ -79,7 +79,10 @@ module.exports = function (eleventyConfig) {
       "/assets/js/is-land-autoinit.js",
   });
   eleventyConfig.addPassthroughCopy("./src/assets/js/**/*.js");
+
   eleventyConfig.addPassthroughCopy("./src/assets/images/favicons/**/*");
+
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   return {
     markdownTemplateEngine: "njk",
