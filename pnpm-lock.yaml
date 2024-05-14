@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@11ty/eleventy-fetch':
+    specifier: ^4.0.1
+    version: 4.0.1
   '@11ty/eleventy-img':
     specifier: ^3.1.8
     version: 3.1.8
@@ -14,6 +17,9 @@ dependencies:
   clean-css:
     specifier: ^5.3.3
     version: 5.3.3
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   fast-glob:
     specifier: ^3.3.2
     version: 3.3.2
@@ -60,8 +66,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@11ty/eleventy-fetch@4.0.0:
-    resolution: {integrity: sha512-wGAd0r+8DUWr22fK5r07dOKuNY6ltA7hX+sJzngGZL1yJmuUVdM/xPQZ+iq0BFgf/ZeRdpVEzf2D0cpVZUuiTg==}
+  /@11ty/eleventy-fetch@4.0.1:
+    resolution: {integrity: sha512-yIiLM5ziBmg86i4TlXpBdcIygJHvh/GgPJyAiFOckO9H4y9cQDM8eIcJCUQ4Mum0NEVui/OjhEut2R08xw0vlQ==}
     engines: {node: '>=14'}
     dependencies:
       debug: 4.3.4
@@ -77,7 +83,7 @@ packages:
     resolution: {integrity: sha512-9xVqbykggQAHTSiZEo6nUayS8l8nkM7RU8dCjGzikCc8FXSW/E17ytq7SaDngo24D3LZdD+3Gheh4zSeidrImA==}
     engines: {node: '>=14.15.0'}
     dependencies:
-      '@11ty/eleventy-fetch': 4.0.0
+      '@11ty/eleventy-fetch': 4.0.1
       brotli-size: 4.0.0
       debug: 4.3.4
       entities: 4.5.0
@@ -593,6 +599,11 @@ packages:
       domelementtype: 2.3.0
       domhandler: 4.3.1
     dev: true
+
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexer@0.1.1:
     resolution: {integrity: sha512-sxNZ+ljy+RA1maXoUReeqBBpBC6RLKmg5ewzV+x+mSETmWNoKdZN6vcQjpFROemza23hGFskJtFNoUWUaQ+R4Q==}

@@ -18,9 +18,11 @@
     "prettier-plugin-jinja-template": "^1.4.0"
   },
   "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/is-land": "^4.0.0",
     "clean-css": "^5.3.3",
+    "dotenv": "^16.4.5",
     "fast-glob": "^3.3.2"
   }
 }
