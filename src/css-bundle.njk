@@ -3,9 +3,9 @@ permalink: /assets/css/bundle.min.css
 ---
 
 {% setAsync "css" %}
-{% include "src/assets/css/utilities.css" %}
-{% includeAll "src/assets/css/blocks/*.css" %}
-{% includeAll "src/assets/css/layouts/*.css" %}
+  {% include "src/assets/css/utilities.css" %}
+  {% includeAll "src/assets/css/blocks/*.css" %}
+  {% includeAll "src/assets/css/layouts/*.css" %}
 {% endsetAsync %}
 
 {{ css | cssmin | safe }}
