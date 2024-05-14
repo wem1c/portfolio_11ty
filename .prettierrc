@@ -1,5 +1,12 @@
 {
+  "plugins": ["prettier-plugin-jinja-template"],
   "overrides": [
+    {
+      "files": ["*.prettierrc"],
+      "options": {
+        "parser": "json"
+      }
+    },
     {
       "files": ["*.html", "*.njk"],
       "options": {
