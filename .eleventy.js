@@ -1,3 +1,6 @@
+// Initialize dotenv for .env file support
+require("dotenv").config();
+
 const CleanCSS = require("clean-css");
 const fastGlob = require("fast-glob");
 const fs = require("fs");
