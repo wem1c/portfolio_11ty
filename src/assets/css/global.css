@@ -147,12 +147,17 @@ article > h3 {
   margin-block-start: var(--space-m);
 }
 
-code {
+article > code {
   display: inline-block;
   background-color: var(--color-background-dark);
   border-radius: 0.2em;
   padding: 0.1em 0.3em;
   margin-block: 0.1em;
+}
+
+article > ul,
+article > ol {
+  margin-block-end: var(--space-l);
 }
 
 @media (prefers-reduced-motion) {
