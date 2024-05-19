@@ -147,7 +147,12 @@ article > h3 {
   margin-block-start: var(--space-m);
 }
 
-article > code {
+article > ul,
+article > ol {
+  margin-block-end: var(--space-l);
+}
+
+article code {
   display: inline-block;
   background-color: var(--color-background-dark);
   border-radius: 0.2em;
@@ -155,9 +160,8 @@ article > code {
   margin-block: 0.1em;
 }
 
-article > ul,
-article > ol {
-  margin-block-end: var(--space-l);
+article blockquote {
+  font-style: italic;
 }
 
 @media (prefers-reduced-motion) {
