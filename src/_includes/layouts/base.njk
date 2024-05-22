@@ -1,78 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ locale }}" data-theme="light">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        {%- set pageTitle = title + ' - ' + site.name %}
+    {%- set pageTitle = title + ' - ' + site.name -%}
 
-        <title>{{ pageTitle }}</title>
+    <title>{{ pageTitle }}</title>
 
-        {%- if not metaDesc %}
-            {%- set metaDesc = summary %}
-        {% endif -%}
+    {%- if not metaDesc -%}
+      {%- set metaDesc = summary -%}
+    {%- endif -%}
 
-        <meta name="description" content="{{ metaDesc }}" />
-        <meta name="twitter:description" content="{{ metaDesc }}" />
-        <meta property="og:description" content="{{ metaDesc }}" />
+    <meta name="description" content="{{ metaDesc }}" />
+    <meta name="twitter:description" content="{{ metaDesc }}" />
+    <meta property="og:description" content="{{ metaDesc }}" />
 
-        <meta name="keywords"
-              content="Full-stack development, Web development, Programming, Front-end development, Back-end development, JavaScript, HTML, CSS, Node.js, React.js, Django, API development, Responsive web design, User experience (UX), Version control (Git)" />
-        <meta name="generator" content="Eleventy" />
-        <meta name="author" content="Conor C. Peterson" />
+    <meta
+      name="keywords"
+      content="Full-stack development, Web development, Programming, Front-end development, Back-end development, JavaScript, HTML, CSS, Node.js, React.js, Django, API development, Responsive web design, User experience (UX), Version control (Git)"
+    />
+    <meta name="generator" content="Eleventy" />
+    <meta name="author" content="Conor C. Peterson" />
 
-        {#- Get current url by concatenating the canonical site url and the curent page url #}
-        {#- Remove one instance of "/" from the start of page.url to prevent doubling #}
-        {% set currentUrl = site.url + page.url | replace("/", "", 1) -%}
+    {#- Get current url by concatenating the canonical site url and the curent page url #}
+    {#- Remove one instance of "/" from the start of page.url to prevent doubling #}
+    {%- set currentUrl = site.url + page.url | replace("/", "", 1) -%}
 
-        <link rel="canonical" href="{{ currentUrl }}" />
+    <link rel="canonical" href="{{ currentUrl }}" />
+    <link rel="me" href="https://social.linux.pizza/@wemic" />
 
-        <meta property="og:site_name" content="{{ site.name }}" />
-        <meta property="og:title" content="{{ pageTitle }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ currentUrl }}" />
-        <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ currentUrl }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
 
-        {%- if socialImage %}
-            <meta property="og:image" content="{{ socialImage }}" />
-            <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content="{{ socialImage }}" />
-            <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
-        {% endif %}
+    {%- if socialImage -%}
+      <meta property="og:image" content="{{ socialImage }}" />
+      <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="{{ socialImage }}" />
+      <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+    {% endif %}
 
-        <link rel="apple-touch-icon"
-              sizes="180x180"
-              href="/assets/images/favicons/apple-touch-icon.png" />
-        <link rel="icon"
-              type="image/png"
-              sizes="32x32"
-              href="/assets/images/favicons/favicon-32x32.png" />
-        <link rel="icon"
-              type="image/png"
-              sizes="16x16"
-              href="/assets/images/favicons/favicon-16x16.png" />
-        <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
 
-        <link rel="stylesheet" href="/assets/css/reset.css" fetchpriority="high" />
-        <link rel="stylesheet" href="/assets/css/global.css" fetchpriority="high" />
-        <link rel="stylesheet"
-              href="/assets/css/bundle.min.css"
-              fetchpriority="auto" />
-    </head>
+    <link rel="stylesheet" href="/assets/css/reset.css" fetchpriority="high" />
+    <link rel="stylesheet" href="/assets/css/global.css" fetchpriority="high" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/bundle.min.css"
+      fetchpriority="auto"
+    />
+  </head>
 
-    <body>
-        {% include "partials/header.njk" -%}
-        <hr />
-        {%- block content %}
-        {% endblock content %}
-        <hr />
-        {% include "partials/footer.njk" -%}
-    </body>
+  <body>
+    {%- include "partials/header.njk" -%}
+    <hr />
+    {%- block content -%}
+    {% endblock content %}
+    <hr />
+    {%- include "partials/footer.njk" -%}
+  </body>
 
-    <script type="module" src="/assets/js/is-land.js" async></script>
-    <script type="module" src="/assets/js/animated-flag.js" async></script>
+  <script type="module" src="/assets/js/is-land.js" async></script>
+  <script type="module" src="/assets/js/animated-flag.js" async></script>
 
-    {%- if components %}<script type="module" src="/assets/js/{{components}}.js" async></script>{% endif %}
+  {%- if components -%}
+    <script type="module" src="/assets/js/{{ components }}.js" async></script>
+  {% endif %}
 </html>
