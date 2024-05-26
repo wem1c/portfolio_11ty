@@ -6,6 +6,7 @@ date: "2023-03-27"
 bannerImage: "/images/posts/stochastic-parrots-a-summary.jpg"
 bannerImageAlt: "image of a colorful parrot"
 bannerImageAttribute: 'Photo by <a href="https://unsplash.com/@davidclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Clode</a> on <a href="https://unsplash.com/photos/G7Jd9fMuRHs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+altLocaleUrl: "/cnr/blog/"
 tags: posts_en
 ---
 

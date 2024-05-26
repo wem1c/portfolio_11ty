@@ -6,6 +6,7 @@ category: "weeklog"
 bannerImage: "/images/posts/cog_1.jpg"
 bannerImageAlt: "an imagining of a purple cogwheel inspired jewlery piece"
 bannerImageAttribute: 'Photo by <a href="https://unsplash.com/@ereimer11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Emily Reimer</a> on <a href="https://unsplash.com/photos/W3RjW1rnHN0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+altLocaleUrl: "/cnr/blog/"
 tags: posts_en
 ---
 

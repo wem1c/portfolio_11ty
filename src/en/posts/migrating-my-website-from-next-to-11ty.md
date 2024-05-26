@@ -6,6 +6,7 @@ category: ""
 bannerImage: ""
 bannerImageAlt: ""
 bannerImageAttribute: ""
+altLocaleUrl: "/cnr/blog/"
 tags: posts_en
 ---
 
