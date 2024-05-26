@@ -19,8 +19,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
-  eleventyConfig.addFilter("locale_url", (url, currLocale, targerLocale) => {
-    return url.replace(`/${currLocale}`, `/${targerLocale}`);
+
+  eleventyConfig.addFilter("swap_locale", (url) => {
+    if (url.match(/\/en\//g)) {
+      return url.replace("/en/", "/cnr/");
+    }
+
+    return url.replace("/cnr/", "/en/");
   });
 
   /**

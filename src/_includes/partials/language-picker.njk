@@ -1,9 +1,9 @@
-{%- if locale === "en" %}
-    <a id="language-picker"
-       href="{{ page.url | locale_url('en', 'cnr') }}"
-       class="language-picker">🇺🇸</a>
-{%- else %}
-    <a id="language-picker"
-       href="{{ page.url | locale_url('cnr', 'en') }}"
-       class="language-picker">🇲🇪</a>
+{% if altLocaleUrl %}
+  {% set href = altLocaleUrl %}
+{% else %}
+  {% set href = page.url | swap_locale %}
 {% endif %}
+
+<a id="language-picker" href="{{ href }}" class="language-picker"
+  >{{ langPicker.flags[locale] }}</a
+>
