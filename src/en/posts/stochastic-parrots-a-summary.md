@@ -6,7 +6,7 @@ date: "2023-03-27"
 bannerImage: "/images/posts/stochastic-parrots-a-summary.jpg"
 bannerImageAlt: "image of a colorful parrot"
 bannerImageAttribute: 'Photo by <a href="https://unsplash.com/@davidclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Clode</a> on <a href="https://unsplash.com/photos/G7Jd9fMuRHs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
-altLocaleUrl: "/cnr/blog/"
+altLocaleUrl: "/cnr/blog/stohastički-papagaji-sažetak.html"
 tags: posts_en
 ---
 
@@ -62,6 +62,6 @@ Adopting frameworks which outline the uses their models are suited for, as well 
 
 The guilt doesn’t lie on the models themselves, but on us as creators and how we go about doing that. AI is the latest tool made by humans, and is here to stay. But we must be extremely careful and diligent in our methods of data gathering and processing, and model training, to ensure these tools are useful and not detrimental.
 
-### The End.
+## The End.
 
 You’ve made it this far so let me save you the work of scrolling back up: [the research paper](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922). The authors do a wonderful job of expertly covering all of the topics mentioned and more, referencing their sources at every point. There’s so much I haven’t covered in this article, because you must read it for yourself. ‘Till next time!
