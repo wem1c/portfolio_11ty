@@ -2,62 +2,92 @@
 
 {# Get posts by locale #}
 {% if locale and locale == "cnr" %}
-    {% set posts = collections.posts_cnr %}
+  {% set posts = collections.posts_cnr %}
 {% elif locale == "en" %}
-    {% set posts = collections.posts_en %}
+  {% set posts = collections.posts_en %}
 {% else %}
-    {% set posts = [] %}
+  {% set posts = [] %}
 {% endif %}
-
-{% set dateOptions = {
-    "hour12": false,
-    "year": "numeric",
-    "month": "numeric",
-    "day": "numeric",
-    "hour": "numeric",
-    "minute": "numeric",
-    "timeZoneName": "short"
-} %}
+{%
+  set dateOptions = {
+      "year": "numeric",
+      "month": "numeric",
+      "day": "numeric"
+  }
+%}
 
 {# TODO: move the svgs to files and import, or anything to make it more readable? #}
 {% block content %}
-    <main id="posts" class="posts | box">
-        <header class="posts__header">
-            <p class="text-italic">
-                <a href="/{{ locale }}/feeds/rss.xml">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss">
-                        <path d="M4 11a9 9 0 0 1 9 9"/>
-                        <path d="M4 4a16 16 0 0 1 16 16"/>
-                        <circle cx="5" cy="19" r="1"/>
-                    </svg>RSS
-                </a> +
-                <a href="/{{ locale }}/feeds/atom.xml">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom">
-                        <circle cx="12" cy="12" r="1"/>
-                        <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/>
-                        <path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/>
-                    </svg>Atom
-                </a>
-            </p>
-        </header>
+  <main id="posts" class="posts | box">
+    <header class="posts__header">
+      <p class="text-italic">
+        <a href="/{{ locale }}/feeds/rss.xml">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-rss"
+          >
+            <path d="M4 11a9 9 0 0 1 9 9" />
+            <path d="M4 4a16 16 0 0 1 16 16" />
+            <circle cx="5" cy="19" r="1" /></svg
+          >RSS
+        </a>
+        +
+        <a href="/{{ locale }}/feeds/atom.xml">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-atom"
+          >
+            <circle cx="12" cy="12" r="1" />
+            <path
+              d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"
+            />
+            <path
+              d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"
+            /></svg
+          >Atom
+        </a>
+      </p>
+    </header>
 
-        {% if posts | length != 0 %}
-            <ul id="posts-list"
-                class="posts__list | padding-inline-start-none"
-                role="list">
-                {% for post in posts | reverse %}
-                    <li>
-                        <h3>
-                            <a href="{{ post.url }}">{{ post.data.title }}</a>
-                        </h3>
-                        <small>
-                            <time datetime="{{ post.date }}"><em>{{ post.date.toLocaleDateString(locale, dateOptions) }}</em></time>
-                        </small>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p class="text-center">{{ dictionary["no-posts"][locale] }}</p>
-        {% endif %}
-    </main>
+    {% if posts | length != 0 %}
+      <ul
+        id="posts-list"
+        class="posts__list | padding-inline-start-none"
+        role="list"
+      >
+        {% for post in posts | reverse %}
+          <li>
+            <h3>
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h3>
+            <small>
+              <time datetime="{{ post.date }}"
+                ><em
+                  >{{ post.date.toLocaleDateString(locale, dateOptions) }}</em
+                ></time
+              >
+            </small>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="text-center">{{ dictionary["no-posts"][locale] }}</p>
+    {% endif %}
+  </main>
 {% endblock content %}
