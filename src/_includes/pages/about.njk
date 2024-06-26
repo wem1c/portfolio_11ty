@@ -1,61 +1,74 @@
+---
+components: animated-flag
+---
+
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <main id="about"
-          class="about | box cluster | border-none"
-          data-justify="center"
-          data-align="flex-start">
-        <aside class="about__contact | stack" data-align="center">
-            <small><em>{{ dictionary.me[locale] }}</em></small>
+  <main
+    id="about"
+    class="about | box cluster | border-none"
+    data-justify="center"
+    data-align="flex-start"
+  >
+    <article class="about__bio">
+      <h2>Bio</h2>
 
-            <div id="image-container" class="frame">
-                {% image "./src/assets/images/pfp_circle.png", "Conor C.'s profile picture", [420, 450, 490], "(max-width: 768px) 88vw,(max-width: 1024px) 55vw, 45vw", "eager", "sync" %}
-            </div>
+      {% for paragraph in dictionary.bio[locale] %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </article>
 
-            <a href="mailto:conorpetersondev@gmail.com"
-               class="button"
-               button-color="secondary">Email me!</a>
-        </aside>
+    <aside class="about__contact | stack" data-align="center">
+      <is-land on:media="(prefers-reduced-motion: no-preference)">
+        <animated-flag columns="10" class="aspect-3-2"></animated-flag>
+      </is-land>
 
-        <article class="about__bio">
-            <h2>Bio</h2>
+      <a
+        href="mailto:conorpetersondev@gmail.com"
+        class="button"
+        button-color="secondary"
+        >Email me!</a
+      >
+    </aside>
+  </main>
 
-            {% for paragraph in dictionary.bio[locale] %}<p>{{ paragraph }}</p>{% endfor %}
-        </article>
-    </main>
+  <hr />
 
-    <hr />
+  {# TODO: categorize tech and add filtering #}
+  <section id="tech" class="tech | box | border-none padding-inline-2xs-3xl">
+    <article class="max-width-full">
+      <header>
+        <h2>{{ dictionary.tech.enjoying[locale] }}</h2>
+      </header>
 
-    {# TODO: categorize tech and add filtering #}
-    <section id="tech" class="tech | box | border-none padding-inline-2xs-3xl">
-        <article class="max-width-full">
-            <header>
-                <h2>{{ dictionary.tech.enjoying[locale] }}</h2>
-            </header>
+      <ul
+        class="tech__list | cluster | list-style-type-none padding-inline-start-none"
+        data-justify="start"
+      >
+        {% for tech in tech.enjoying %}
+          <li class="tech__item">
+            <a href="{{ tech.url }}">{{ tech.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
 
-            <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
-                data-justify="start">
-                {% for tech in tech.enjoying %}
-                    <li class="tech__item">
-                        <a href="{{ tech.url }}">{{ tech.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </article>
+    <article class="max-width-full">
+      <header>
+        <h2>{{ dictionary.tech.explored[locale] }}</h2>
+      </header>
 
-        <article class="max-width-full">
-            <header>
-                <h2>{{ dictionary.tech.explored[locale] }}</h2>
-            </header>
-
-            <ul class="tech__list | cluster | list-style-type-none padding-inline-start-none"
-                data-justify="start">
-                {% for tech in tech.exploring %}
-                    <li class="tech__item">
-                        <a href="{{ tech.url }}">{{ tech.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </article>
-    </section>
+      <ul
+        class="tech__list | cluster | list-style-type-none padding-inline-start-none"
+        data-justify="start"
+      >
+        {% for tech in tech.exploring %}
+          <li class="tech__item">
+            <a href="{{ tech.url }}">{{ tech.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+  </section>
 {% endblock content %}

@@ -3,9 +3,18 @@
 }
 
 .about__contact {
+  width: 100%;
   max-width: min(100vw, 40ch);
 
   margin-block: var(--space-s, 1rem);
+}
+
+.about__contact > is-land {
+  margin-block-start: var(--space-l);
+
+  width: 100%;
+
+  aspect-ratio: 3/2;
 }
 
 .about__contact > small {
