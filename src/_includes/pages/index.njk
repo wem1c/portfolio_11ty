@@ -5,77 +5,102 @@ components: split-flap
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <main id="hero"
-          class="hero | grid | align-items-center"
-          data-justify="around">
-        <header>
-            <h1 class="margin-block-start-none">{{ dictionary.hero[locale].first }}</h1>
+  <main
+    id="hero"
+    class="hero | grid | align-items-center"
+    data-justify="around"
+  >
+    <header>
+      <h1 class="margin-block-start-none">
+        {{ dictionary.hero[locale].first }}
+      </h1>
 
-            <br />
+      <br />
 
-            <h2>
-                {{ dictionary.hero[locale].second }} <split-flap-display class="text-accent" data-words="{{ dictionary.hero[locale].words }}">{{ dictionary.hero[locale].words_fallback }}</split-flap-display>
-            </h2>
+      <h2>
+        {{ dictionary.hero[locale].second }}
+        <split-flap-display
+          class="text-accent"
+          data-words="{{ dictionary.hero[locale].words }}"
+          >{{ dictionary.hero[locale].words_fallback }}</split-flap-display
+        >
+      </h2>
 
-            <br />
+      <br />
 
-            <p>
-                Welcome to my website! You can find some of my <a href="#projects">projects</a> and <a href="#repos">code</a> further down. If you're looking to hire me, you can find my availability and contact info on the <a href="/{{ locale }}/about">about page</a>. You can also find my writing on the <a href="/{{ locale }}/blog">blog page</a>.
-            </p>
-        </header>
+      <p>
+        Welcome to my website! You can find some of my
+        <a href="#projects">projects</a> and <a href="#repos">code</a> further
+        down. If you're looking to hire me, you can find my availability and
+        contact info on the <a href="/{{ locale }}/about">about page</a>. You
+        can also find my writing on the
+        <a href="/{{ locale }}/blog">blog page</a>.
+      </p>
+    </header>
 
-        <is-land on:media="(prefers-reduced-motion: no-preference)" class="aspect-3-2">
-        <animated-flag columns="10" class="aspect-3-2"></animated-flag>
-        </is-land>
-    </main>
+    <div id="image-container" class="hero__image | frame">
+      {% image "./src/assets/images/pfp_circle.png", "A selfie of a person against a dark green background with white-outlined symbols splattered against it", [612, 612], "100vw, (min-with: 768) 50vw", "eager", "sync" %}
+    </div>
+  </main>
 
-    <section id="projects"
-             class="projects | box stack | border-none padding-inline-2xs-3xl">
+  <section
+    id="projects"
+    class="projects | box stack | border-none padding-inline-2xs-3xl"
+  >
+    <header id="projects-header">
+      <h1 id="projects-title" class="margin-block-start-none">
+        {{ dictionary.projects.title[locale] }}
+      </h1>
+    </header>
 
-        <header id="projects-header">
-            <h1 id="projects-title" class="margin-block-start-none">{{ dictionary.projects.title[locale] }}</h1>
-        </header>
-
-        <div id="project-grid"
-             class="projects__grid | flex-grid"
-             data-justify="center">
-            {% for project in projects %}
-                <div id="project-card"
-                     class="projects__card | relative"
-                     data-disabled="{{ project.disabled }}">
-                    <a href="{{ project.url }}"
-                       aria-label="{{ "Visit the " + project.title + " website." }}">
-                        <div id="project-image" class="[ frame ]">
-                            {% image project.imageSrc, project.imageAlt, [660, 385], "(max-width: 1024px) 90vw, 45vw" %}
-                        </div>
-                        <h3 id="project-label" class="project__label">{{ project.title }}</h3>
-                    </a>
-                </div>
-            {% endfor %}
+    <div
+      id="project-grid"
+      class="projects__grid | flex-grid"
+      data-justify="center"
+    >
+      {% for project in projects %}
+        <div
+          id="project-card"
+          class="projects__card | relative"
+          data-disabled="{{ project.disabled }}"
+        >
+          <a
+            href="{{ project.url }}"
+            aria-label="{{ "Visit the " + project.title + " website." }}"
+          >
+            <div id="project-image" class="[ frame ]">
+              {% image project.imageSrc, project.imageAlt, [660, 385], "(max-width: 1024px) 90vw, 45vw" %}
+            </div>
+            <h3 id="project-label" class="project__label">
+              {{ project.title }}
+            </h3>
+          </a>
         </div>
-    </section>
+      {% endfor %}
+    </div>
+  </section>
 
-    <section id="repos" class="repos | box stack | border-none">
-        <header id="repos-header" class="repos__header">
-            <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
-            <a href="https://github.com/wem1c?tab=repositories" class="color-black"><small>{{ dictionary.repos.button[locale] }}</small></a>
-        </header>
+  <section id="repos" class="repos | box stack | border-none">
+    <header id="repos-header" class="repos__header">
+      <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
+      <a href="https://github.com/wem1c?tab=repositories" class="color-black"
+        ><small>{{ dictionary.repos.button[locale] }}</small></a
+      >
+    </header>
 
-        <div id="repos-grid"
-             class="flex-grid | repos__grid | list-style-type-none">
-
-            {% if repos.length > 0 %}
-                {% for repo in repos %}
-                    <a href="{{ repo.html_url }}" class="repos__repo-link">
-                        <div id="repo-card" class="relative">
-                            <h3 id="repo-name" class="repos__repo-name">{{ repo.name }}</h3>
-                            <p id="repo-desc">{{ repo.description }}</p>
-                        </div>
-                    </a>
-                {% endfor %}
-            {% else %}
-                <p>{{ dictionary.repos.error[locale] }}</p>
-            {% endif %}
-        </div>
-    </section>
+    <div id="repos-grid" class="flex-grid | repos__grid | list-style-type-none">
+      {% if repos.length > 0 %}
+        {% for repo in repos %}
+          <a href="{{ repo.html_url }}" class="repos__repo-link">
+            <div id="repo-card" class="relative">
+              <h3 id="repo-name" class="repos__repo-name">{{ repo.name }}</h3>
+              <p id="repo-desc">{{ repo.description }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p>{{ dictionary.repos.error[locale] }}</p>
+      {% endif %}
+    </div>
+  </section>
 {% endblock content %}

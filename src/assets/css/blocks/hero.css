@@ -11,3 +11,8 @@
 .hero > header > h1 {
   line-height: 1.5;
 }
+
+.hero__image {
+  --frame-n: 1;
+  --frame-d: 1;
+}
