@@ -1,6 +1,6 @@
 .frame {
-  --n: 16; /* numerator */
-  --d: 9; /* denominator */
+  --n: var(--frame-n, 16); /* numerator */
+  --d: var(--frame-d, 9); /* denominator */
 
   aspect-ratio: var(--n) / var(--d);
   overflow: hidden;
