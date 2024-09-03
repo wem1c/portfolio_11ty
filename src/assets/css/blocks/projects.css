@@ -1,18 +1,16 @@
 .projects {
   --box-padding: var(--space-xl) var(--space-m);
-  --box-background: var(--color-primary);
+  --box-background: transparent;
+
   --stack-gap: var(--space-l);
-
-  background-color: var(--color-accent);
-}
-
-.projects__grid {
-  /* Account for project-card::before drop shadow */
-  padding-inline-end: 8px;
 }
 
 .projects__grid {
   --grid-gap: var(--space-m);
+  --grid-col-wmin: 425px;
+
+  /* Account for project-card::before drop shadow */
+  padding-inline-end: 8px;
 }
 
 #project-card[data-disabled="true"] {
