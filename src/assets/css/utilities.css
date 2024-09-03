@@ -112,16 +112,40 @@
   color: color-mix(in oklch, var(--color-primary) 100%, white 30%);
 }
 
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+
 .text-secondary {
   color: var(--color-secondary);
 }
 
 .text-secondary-dark {
-  color: color-mix(in oklch, var(--color-secondary) 100%, black 40%);
+  color: var(--color-secondary-dark);
 }
 
 .text-shadow {
   text-shadow: 1px 1px 0px var(--color-text);
+}
+
+.text-step-1 {
+  font-size: var(--step-1);
+}
+
+.text-step-2 {
+  font-size: var(--step-2);
+}
+
+.text-step-3 {
+  font-size: var(--step-3);
+}
+
+.text-step-4 {
+  font-size: var(--step-4);
+}
+
+.text-step-5 {
+  font-size: var(--step-5);
 }
 
 .text-xl {
