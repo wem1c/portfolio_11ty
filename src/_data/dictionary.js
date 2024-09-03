@@ -29,15 +29,19 @@ module.exports = {
   hero: {
     en: {
       first: "Hello there! 👋",
-      second: "I'm Conor C., your friendly neighborhood ",
-      words: "programmer! ⌨️, developer! 💻, engineer! ⚙️, spiderman! 🕷️",
-      words_fallback: "programmer! ⌨️",
+      second:
+        "I'm <span class='hero__name'>Conor C. Peterson</span>, a full-stack web engineer, and I make projects <expanding-acronym class='hero__acronym' data-words='Logical Efficient Adaptable Performant' data-dots='true'>L.E.A.P.</expanding-acronym>!",
+      third:
+        'Explore my <a href="#projects">portfolio</a> below, dive into my thoughts on the <a href="/{{ locale }}/blog">blog</a>, or get to know more <a href="/{{ locale }}/about">about</a> me!',
+      abbWords: "Logical, Efficient, Adaptable, Powerful",
     },
     cnr: {
       first: "Zdravo! 👋",
-      second: "Ja sam Conor C., vaš prijateljski susjedni ",
-      words: "programer! ⌨️, developer! 💻, inženjer! ⚙️, spiderman! 🕷️",
-      words_fallback: "programer! ⌨️",
+      second:
+        "Ja sam <span class='hero__name'>Conor C. Peterson</span>, full-stack web inženjer koji pravi <expanding-acronym class='hero__acronym' data-words='Jednostavne Adaptivne Kvalitetne Efektivne' data-dots='true'>J.A.K.E.</expanding-acronym> projekte!",
+      third:
+        'Pregledaj moj <a href="#projects">portfolio</a> u nastavku, pročitaj moje pisanije na <a href="/{{ locale }}/blog">blogu</a>, ili istraži malo više <a href="/{{ locale }}/about">o meni</a>!',
+      abbWords: "Logical, Efficient, Adaptable, Powerful",
     },
   },
   me: { en: "That's me! 👇", cnr: "To sam ja! 👇" },

@@ -4,12 +4,36 @@
   padding-block: var(--space-xl-2xl) var(--space-2xl-3xl);
 }
 
-.hero > :first-child {
-  margin-block-start: 0;
+.hero__text {
+  margin-block-end: var(--space-s);
 }
 
-.hero > header > h1 {
-  line-height: 1.5;
+.hero__text > *:not(:first-child) {
+  margin-block-start: var(--space-m-l);
+}
+
+.hero__name {
+  font-size: var(--step-4);
+  color: var(--color-primary-dark);
+}
+
+.hero__acronym {
+  padding-inline: 0.25rem;
+
+  font-size: var(--step-3);
+  font-weight: 500;
+
+  color: var(--color-accent);
+
+  border-radius: 0.25rem;
+}
+
+.hero__acronym:hover,
+.hero__acronym:active {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+
+  text-decoration: underline;
 }
 
 .hero__image {

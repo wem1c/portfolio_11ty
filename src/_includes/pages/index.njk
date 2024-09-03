@@ -1,5 +1,5 @@
 ---
-components: split-flap
+components: expanding-acronym
 ---
 
 {% extends "layouts/base.njk" %}
@@ -10,31 +10,15 @@ components: split-flap
     class="hero | grid | align-items-center"
     data-justify="around"
   >
-    <header>
-      <h1 class="margin-block-start-none">
+    <header class="hero__text">
+      <p class="margin-block-start-none text-step-3">
         {{ dictionary.hero[locale].first }}
-      </h1>
+      </p>
 
-      <br />
+      <p class="text-step-2">{{ dictionary.hero[locale].second | safe }}</p>
 
-      <h2>
-        {{ dictionary.hero[locale].second }}
-        <split-flap-display
-          class="text-accent"
-          data-words="{{ dictionary.hero[locale].words }}"
-          >{{ dictionary.hero[locale].words_fallback }}</split-flap-display
-        >
-      </h2>
-
-      <br />
-
-      <p>
-        Welcome to my website! You can find some of my
-        <a href="#projects">projects</a> and <a href="#repos">code</a> further
-        down. If you're looking to hire me, you can find my availability and
-        contact info on the <a href="/{{ locale }}/about">about page</a>. You
-        can also find my writing on the
-        <a href="/{{ locale }}/blog">blog page</a>.
+      <p class="text-step-1">
+        {{ dictionary.hero[locale].third | renderString({ locale: locale }) | safe }}
       </p>
     </header>
 
