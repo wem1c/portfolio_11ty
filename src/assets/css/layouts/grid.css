@@ -4,7 +4,7 @@
   /* ↓ Set a gap between grid items */
   grid-gap: var(--grid-gap, 1rem);
   /* ↓ Set the minimum column width */
-  --minimum: 300px;
+  --minimum: var(--grid-col-wmin, 300px);
 }
 
 @supports (width: min(var(--minimum), 100%)) {
