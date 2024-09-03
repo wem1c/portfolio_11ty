@@ -61,6 +61,7 @@
   --color-text-light: color-mix(in oklch, var(--color-text) 50%, white 50%);
 
   --color-background: oklch(97.33% 0.027 90.9);
+  --color-background-tint: oklch(95.68% 0.055 90.32);
   --color-background-dark: color-mix(
     in oklch,
     var(--color-background),
@@ -68,9 +69,18 @@
   );
 
   --color-primary: oklch(84.88% 0.146 125.27);
+  --color-primary-dark: color-mix(in oklch, var(--color-primary), black 40%);
+
   --color-secondary: oklch(79.12% 0.153 75.35);
-  --color-accent: oklch(59% 0.28 338.41);
-  --color-accent-dark: color-mix(in oklch, var(--color-accent), black 40%);
+  --color-secondary-dark: color-mix(
+    in oklch,
+    var(--color-secondary),
+    black 40%
+  );
+
+  --color-accent: oklch(58.42% 0.25592200781975005 338.13134085516555);
+  --color-accent-dark: color-mix(in oklch, var(--color-accent), black 10%);
+  --color-accent-light: color-mix(in oklch, var(--color-accent), white 10%);
 }
 
 /* TODO: add color tints from light mode */
