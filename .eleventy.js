@@ -6,6 +6,7 @@ const fastGlob = require("fast-glob");
 const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const nunjucks = require("nunjucks");
 
 module.exports = function (eleventyConfig) {
   /**
@@ -18,6 +19,11 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
+  });
+
+  // Renders a string through a Nunjucks environment
+  eleventyConfig.addFilter("renderString", function (content, context) {
+    return new nunjucks.Environment().renderString(content, context);
   });
 
   eleventyConfig.addFilter("swap_locale", (url) => {
