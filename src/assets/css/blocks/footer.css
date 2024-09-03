@@ -16,7 +16,6 @@
 }
 
 .footer__socials {
-  --button-background: var(--color-background);
   --button-text: var(--color-text-light);
 
   width: fit-content;
