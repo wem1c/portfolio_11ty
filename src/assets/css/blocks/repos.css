@@ -1,12 +1,13 @@
 .repos {
   --box-padding: var(--space-m) var(--space-2xs-3xl);
   --stack-gap: var(--space-l);
+
+  margin-block-start: var(--space-s);
 }
 
 .repos__grid {
-  --ideal: 60ch;
-  --max: 75ch;
-  --grid-gap: var(--space-l);
+  --grid-gap: var(--space-m);
+  --grid-col-wmin: 45ch;
 }
 
 .repos__repo-link {
@@ -19,4 +20,8 @@
   text-underline-offset: 0.3em;
   line-height: 1.5;
   margin-block-start: 0;
+}
+
+.repos__repo-desc {
+  margin-block-start: var(--space-s);
 }
