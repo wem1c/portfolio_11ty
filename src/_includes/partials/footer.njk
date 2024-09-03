@@ -1,29 +1,29 @@
 <footer class="footer">
-    <small>Made with 🧠⚡ + ❤️</small>
+  <small>{{ dictionary.footer[locale] | safe }}</small>
 
-    <small>◝(ᵔᗜᵔ)◜</small>
+  <small>◝(ᵔᗜᵔ)◜</small>
 
-    <ul id="socials"
-        class="footer__socials | cluster"
-        data-justify="evenly">
-        {%- for social in socials %}
-            <li>
-                <a href="{{ social.url }}"
-                   aria-label="{{ "Visit my " + social.name + " page." }}"
-                   class="button square | display-inline-block"
-                   button-shape="square"
-                   button-color="background"
-                   button-variant="hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 24 24"
-                         fill="currentColor"
-                         width="36"
-                         height="36">
-                        <path d="{{ social.icon_path }}"></path>
-                    </svg>
-                </a>
-            </li>
-        {% endfor -%}
-    </ul>
-
+  <ul id="socials" class="footer__socials | cluster" data-justify="evenly">
+    {%- for social in socials -%}
+      <li>
+        <a
+          href="{{ social.url }}"
+          aria-label="{{ "Visit my " + social.name + " page." }}"
+          class="button square | display-inline-block"
+          button-shape="square"
+          button-variant="hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="36"
+            height="36"
+          >
+            <path d="{{ social.icon_path }}"></path>
+          </svg>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
 </footer>

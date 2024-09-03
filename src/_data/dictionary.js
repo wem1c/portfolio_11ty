@@ -56,4 +56,8 @@ module.exports = {
     enjoying: { en: "Tech I'm enjoying:", cnr: "Uživam koristeći:" },
     explored: { en: "Tech I'm exploring:", cnr: "Istražujem:" },
   },
+  footer: {
+    en: "Made with 🧠⚡ & ❤️ using <a href='https://www.11ty.dev/'>11ty</a>!",
+    cnr: "Napravljeno s 🧠⚡ & ❤️ koristeći <a href='https://www.11ty.dev/'>11ty</a>!",
+  },
 };
