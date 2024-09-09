@@ -14,7 +14,7 @@
 
 .hero__name {
   font-size: var(--step-4);
-  color: var(--color-primary-dark);
+  color: var(--color-accent);
 }
 
 .hero__acronym {
