@@ -1,16 +1,15 @@
 .button {
   background-color: var(--button-background, inherit);
-  color: var(--button-text, inherit);
-
-  padding: 0.2em 0.4em;
-
   box-shadow: 0.2em 0.2em 0px black;
 
+  color: var(--button-text, inherit);
   text-decoration: none;
 
   border: 1px solid transparent;
+  padding: 0.2em 0.4em;
 
-  transition-property: box-shadow, transform, background-color, border-color;
+  transition-property: background-color, border-color, box-shadow, color,
+    transform;
   transition-duration: 200ms;
   transition-timing-function: var(--easeOutCirc, ease-out);
 }
