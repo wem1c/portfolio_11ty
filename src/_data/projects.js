@@ -1,7 +1,14 @@
 module.exports = [
   {
+    title: "Kraljevi Kvota",
+    url: "https://kraljevikvota.me/",
+    imageSrc: "./src/assets/images/projects/kraljevi_kvota.png",
+    imageAlt: "Screenshot of Kraljevi Kvota's website homepage",
+  },
+  {
     title: "Navy Blue",
-    url: "https://navyblue.me/",
+    // url: "https://navyblue.me/",
+    url: "https://avalon-psi.vercel.app/",
     imageSrc: "./src/assets/images/projects/navy_blue.png",
     imageAlt: "Screenshot of Navy Blue's website homepage",
   },
@@ -20,14 +27,6 @@ module.exports = [
   // In progress placeholders
   {
     title: "JD",
-    url: "#projects",
-    imageSrc: "./src/assets/images/projects/in_progress.png",
-    imageAlt:
-      "A green background with white text on top that says 'Project in progress...'",
-    disabled: true,
-  },
-  {
-    title: "KK",
     url: "#projects",
     imageSrc: "./src/assets/images/projects/in_progress.png",
     imageAlt:
