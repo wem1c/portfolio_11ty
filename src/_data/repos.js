@@ -811,8 +811,10 @@ module.exports = async function () {
     if (response.status == 200) {
       console.log(`Found ${data.length} repos`);
 
-      console.log(`Filtering out archived repos`);
-      let filtered = data.filter((repo, _) => repo.archived === false);
+      console.log(`Filtering out archived and forked repos..`);
+      let filtered = data.filter(
+        (repo, _) => repo.archived === false && repo.fork === false,
+      );
       console.log(`Found ${filtered.length} non-archived repos`);
 
       console.log("Returning newest 6 repos.");
