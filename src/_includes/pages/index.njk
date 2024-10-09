@@ -27,15 +27,12 @@ components: expanding-acronym
     </div>
   </main>
 
-  <section
-    id="projects"
-    class="projects | box stack | border-none padding-inline-2xs-3xl"
-  >
-    <header id="projects-header">
-      <h1 id="projects-title" class="margin-block-start-none">
+  <fieldset id="projects" role="section" class="projects | box">
+    <legend>
+      <h2 id="projects-title" class="margin-block-start-none">
         {{ dictionary.projects.title[locale] }}
-      </h1>
-    </header>
+      </h2>
+    </legend>
 
     <div id="project-grid" class="projects__grid | grid" data-justify="center">
       {% for project in projects %}
@@ -58,31 +55,35 @@ components: expanding-acronym
         </div>
       {% endfor %}
     </div>
-  </section>
+  </fieldset>
 
-  <section id="repos" class="repos | box stack | border-none">
-    <header id="repos-header" class="repos__header">
-      <h2 id="repos-title">{{ dictionary.repos.title[locale] }}</h2>
-      <a href="https://github.com/wem1c?tab=repositories" class="color-black"
+  <fieldset id="repos" role="section" class="repos | box">
+    <legend class="repos__header">
+      <h2 id="repos-title" class="margin-block-start-none">
+        {{ dictionary.repos.title[locale] }}
+      </h2>
+      <a
+        href="https://github.com/wem1c?tab=repositories"
+        class="repos__view-all"
         ><small>{{ dictionary.repos.button[locale] }}</small></a
       >
-    </header>
+    </legend>
 
     <div id="repos-grid" class="repos__grid | grid | list-style-type-none">
       {% if repos.length > 0 %}
         {% for repo in repos %}
-          <a href="{{ repo.html_url }}" class="repos__repo-link">
-            <div id="repo-card" class="relative">
+          <div id="repo-card" class="relative">
+            <a href="{{ repo.html_url }}" class="repos__repo-link">
               <h3 id="repo-name" class="repos__repo-name">{{ repo.name }}</h3>
-              <p id="repo-desc" class="repos__repo-desc">
-                {{ repo.description }}
-              </p>
-            </div>
-          </a>
+            </a>
+            <p id="repo-desc" class="repos__repo-desc">
+              {{ repo.description }}
+            </p>
+          </div>
         {% endfor %}
       {% else %}
         <p>{{ dictionary.repos.error[locale] }}</p>
       {% endif %}
     </div>
-  </section>
+  </fieldset>
 {% endblock content %}

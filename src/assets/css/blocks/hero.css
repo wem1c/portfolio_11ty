@@ -1,7 +1,5 @@
 .hero {
   --grid-gap: var(--space-2xl);
-
-  padding-block: var(--space-xl-2xl) var(--space-2xl-3xl);
 }
 
 .hero__text {
@@ -14,7 +12,7 @@
 
 .hero__name {
   font-size: var(--step-4);
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .hero__acronym {
@@ -23,7 +21,7 @@
   font-size: var(--step-3);
   font-weight: 500;
 
-  color: var(--color-accent);
+  color: var(--color-primary);
 
   border-radius: 0.25rem;
 }
@@ -31,7 +29,7 @@
 .hero__acronym:hover,
 .hero__acronym:active {
   color: var(--color-background);
-  background-color: var(--color-accent);
+  background-color: var(--color-primary);
 
   text-decoration: underline;
 }

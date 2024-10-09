@@ -1,8 +1,10 @@
 .repos {
-  --box-padding: var(--space-m) var(--space-2xs-3xl);
+  --box-padding: var(--space-m) var(--space-s);
   --stack-gap: var(--space-l);
+}
 
-  margin-block-start: var(--space-s);
+.repos__view-all {
+  color: var(--color-text, black);
 }
 
 .repos__grid {
@@ -12,16 +14,18 @@
 
 .repos__repo-link {
   color: var(--color-text);
-  text-decoration: none;
+}
+
+.repost__repo-link:active {
+  color: var(--color-accent-dark);
 }
 
 .repos__repo-name {
-  text-decoration: underline;
   text-underline-offset: 0.3em;
   line-height: 1.5;
   margin-block-start: 0;
 }
 
 .repos__repo-desc {
-  margin-block-start: var(--space-s);
+  margin-block-start: var(--space-2xs, 0.5rem);
 }

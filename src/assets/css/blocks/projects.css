@@ -1,5 +1,5 @@
 .projects {
-  --box-padding: var(--space-xl) var(--space-m);
+  --box-padding: var(--space-m) var(--space-s);
   --box-background: transparent;
 
   --stack-gap: var(--space-l);

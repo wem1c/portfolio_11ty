@@ -105,15 +105,17 @@ body {
   );
 
   margin: 0;
-}
-
-body > *:not(hr) {
   padding-inline: var(--space-2xs-3xl);
 }
 
 body > hr {
   width: 100%;
   margin: 0;
+  border-top-width: 2px;
+}
+
+body > :not(header, footer, hr) {
+  margin-block: var(--space-2xl);
 }
 
 a:not(.button) {
@@ -145,7 +147,7 @@ article {
 
 article > h1:first-of-type {
   font-size: 2em;
-  margin-block-start: var(--space-m);
+  margin-block-start: 0;
   text-wrap: pretty;
 }
 
@@ -179,9 +181,6 @@ article blockquote {
   font-style: italic;
 }
 
-@media (prefers-reduced-motion) {
-  body * {
-    transition: none !important;
-    animation: none !important;
-  }
+fieldset {
+  border: 2px solid var(--color-text);
 }
