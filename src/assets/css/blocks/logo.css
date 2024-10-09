@@ -2,7 +2,7 @@
   inline-size: 56px;
   block-size: 56px;
 
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .logo__path {
@@ -21,7 +21,7 @@
 }
 
 .logo__path:active {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 @keyframes dash {
