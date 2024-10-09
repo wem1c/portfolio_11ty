@@ -46,7 +46,7 @@ components: expanding-acronym
             aria-label="{{ "Visit the " + project.title + " website." }}"
           >
             <div id="project-image" class="[ frame ]">
-              {% image project.imageSrc, project.imageAlt, [660, 385], "(max-width: 1024px) 90vw, 45vw" %}
+              {% image project.imageSrc, project.imageAlt, [900, 500, "auto"], "(max-width: 80em) 80vw, (max-width: 103em) 40vw, 25vw" %}
             </div>
             <h3 id="project-label" class="project__label">
               {{ project.title }}
