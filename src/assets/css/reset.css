@@ -90,3 +90,8 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* Only leave top border on hr elements */
+hr {
+  border-bottom: none;
+}
