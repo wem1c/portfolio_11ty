@@ -47,6 +47,7 @@
   * Borders
   */
   --border-thin: 0.0625rem;
+  --border-normal: 0.125rem;
 
   /* Components */
   --snow-fall-color: #c6fbff;

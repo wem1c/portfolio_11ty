@@ -1,10 +1,10 @@
 .box {
   padding: var(--box-padding, 1rem);
-  border: var(--border-thin) solid;
+  border: var(--box-border-width, var(--border-normal)) solid;
 
   /* ↓ Always apply the transparent outline, for high contrast mode */
-  outline: var(--border-thin) transparent;
-  outline-offset: calc(var(--border-thin) * -1);
+  outline: var(--box-border-width, var(--border-normal)) transparent;
+  outline-offset: calc(var(--box-border-width, var(--border-normal)) * -1);
 
   color: var(--box-text, --color-text);
   background-color: var(--box-background, --color-background);
