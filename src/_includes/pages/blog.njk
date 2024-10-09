@@ -20,7 +20,7 @@
 {% block content %}
   <main id="posts" class="posts | box">
     <header class="posts__header">
-      <p class="text-italic">
+      <span class="text-italic">
         <a href="/{{ locale }}/feeds/rss.xml">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@
             /></svg
           >Atom
         </a>
-      </p>
+      </span>
     </header>
 
     {% if posts | length != 0 %}
