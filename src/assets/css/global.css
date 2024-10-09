@@ -68,17 +68,17 @@
     black 5%
   );
 
-  --color-primary: oklch(84.88% 0.146 125.27);
+  --color-primary: oklch(79.27% 0.171 70.67);
   --color-primary-dark: color-mix(in oklch, var(--color-primary), black 40%);
 
-  --color-secondary: oklch(79.12% 0.153 75.35);
+  --color-secondary: oklch(89.51% 0.1624 94.5);
   --color-secondary-dark: color-mix(
     in oklch,
     var(--color-secondary),
     black 40%
   );
 
-  --color-accent: oklch(58.42% 0.25592200781975005 338.13134085516555);
+  --color-accent: oklch(85.6% 0.1707 87.38);
   --color-accent-dark: color-mix(in oklch, var(--color-accent), black 10%);
   --color-accent-light: color-mix(in oklch, var(--color-accent), white 10%);
 }
@@ -135,7 +135,7 @@ a:not(.button):has(svg) {
 }
 
 a:not(.button):has(svg) > svg {
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 article {
