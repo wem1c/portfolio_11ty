@@ -2,6 +2,10 @@
   --cluster-gap: var(--space-xs, 1rem) var(--space-3xs-3xl, 1rem);
 }
 
+.about__bio > p {
+  margin-block-start: 2em;
+}
+
 .about__contact {
   width: 100%;
   max-width: min(100vw, 40ch);
@@ -28,12 +32,4 @@
 
 .about__contact > .button {
   --button-background: var(--color-primary);
-}
-
-.about__bio {
-  width: min(100%, 60ch);
-}
-
-.about__bio > p {
-  margin-block-start: 2em;
 }
