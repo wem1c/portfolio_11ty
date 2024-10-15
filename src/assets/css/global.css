@@ -108,12 +108,6 @@ body {
   padding-inline: var(--space-2xs-3xl);
 }
 
-body > hr {
-  width: 100%;
-  margin: 0;
-  border-top-width: 2px;
-}
-
 body > :not(header, footer, hr) {
   margin-block: var(--space-2xl);
 }

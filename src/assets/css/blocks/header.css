@@ -2,10 +2,13 @@
   display: grid;
   grid-auto-flow: column dense;
   gap: var(--space-xs);
+
   align-items: center;
   place-content: space-between;
 
   padding-block: var(--space-xs);
+
+  border-bottom: 0.125rem solid var(--color-text, black);
 }
 
 .header__link:hover > .logo {
