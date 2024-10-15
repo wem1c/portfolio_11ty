@@ -112,7 +112,7 @@ body > :not(header, footer, hr) {
   margin-block: var(--space-2xl);
 }
 
-a:not(.button) {
+a:not([class]) {
   text-underline-offset: 0.2em;
 
   text-decoration-color: var(--color-accent);
@@ -120,18 +120,18 @@ a:not(.button) {
   transition: color 0.15s;
 }
 
-a:not(.button):hover {
+a:not([class]):hover {
   color: var(--color-accent);
 }
 
-a:not(.button):has(svg) {
+a:not([class]):has(svg) {
   display: inline-flex;
   gap: 0.2em;
   align-items: center;
   vertical-align: text-bottom;
 }
 
-a:not(.button):has(svg) > svg {
+a:not([class]):has(svg) > svg {
   color: var(--color-primary);
 }
 
