@@ -14,16 +14,27 @@
 
 .repos__repo-link {
   color: var(--color-text);
+  text-decoration: none;
 }
 
-.repost__repo-link:active {
-  color: var(--color-accent-dark);
+.repos__repo-link:hover > .repos__repo-card {
+  border-color: var(--color-accent);
+}
+
+.repos__repo-link:active > .repos__repo-card {
+  border-color: var(--color-accent);
+}
+
+.repos__repo-card {
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  position: relative;
 }
 
 .repos__repo-name {
-  text-underline-offset: 0.3em;
   line-height: 1.5;
   margin-block-start: 0;
+  text-underline-offset: 0.3em;
 }
 
 .repos__repo-desc {

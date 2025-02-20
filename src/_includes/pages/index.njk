@@ -5,17 +5,17 @@ components: expanding-acronym
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <main
-    id="hero"
-    class="hero | grid | align-items-center"
-    data-justify="around"
-  >
+  <main id="hero"
+        class="hero | grid | align-items-center"
+        data-justify="around">
     <header class="hero__text">
       <p class="margin-block-start-none text-step-3">
         {{ dictionary.hero[locale].first }}
       </p>
 
-      <p class="text-step-2">{{ dictionary.hero[locale].second | safe }}</p>
+      <p class="text-step-2">
+        {{ dictionary.hero[locale].second | safe }}
+      </p>
 
       <p class="text-step-1">
         {{ dictionary.hero[locale].third | renderString({ locale: locale }) | safe }}
@@ -36,15 +36,11 @@ components: expanding-acronym
 
     <div id="project-grid" class="projects__grid | grid" data-justify="center">
       {% for project in projects %}
-        <div
-          id="project-card"
-          class="projects__card | relative"
-          data-disabled="{{ project.disabled }}"
-        >
-          <a
-            href="{{ project.url }}"
-            aria-label="{{ "Visit the " + project.title + " website." }}"
-          >
+        <div id="project-card"
+             class="projects__card | relative"
+             data-disabled="{{ project.disabled }}">
+          <a href="{{ project.url }}"
+             aria-label="{{ "Visit the " + project.title + " website." }}">
             <div id="project-image" class="[ frame ]">
               {% image project.imageSrc, project.imageAlt, [900, 500, "auto"], "(max-width: 80em) 80vw, (max-width: 103em) 40vw, 25vw" %}
             </div>
@@ -62,27 +58,28 @@ components: expanding-acronym
       <h2 id="repos-title" class="margin-block-start-none">
         {{ dictionary.repos.title[locale] }}
       </h2>
-      <a
-        href="https://github.com/wem1c?tab=repositories"
-        class="repos__view-all"
-        ><small>{{ dictionary.repos.button[locale] }}</small></a
-      >
+      <a href="https://github.com/wem1c?tab=repositories"
+         class="repos__view-all"><small>{{ dictionary.repos.button[locale] }}</small></a>
     </legend>
 
     <div id="repos-grid" class="repos__grid | grid | list-style-type-none">
       {% if repos.length > 0 %}
         {% for repo in repos %}
-          <div id="repo-card" class="relative">
-            <a href="{{ repo.html_url }}" class="repos__repo-link">
-              <h3 id="repo-name" class="repos__repo-name">{{ repo.name }}</h3>
-            </a>
-            <p id="repo-desc" class="repos__repo-desc">
-              {{ repo.description }}
-            </p>
-          </div>
+          <a href="{{ repo.html_url }}" class="repos__repo-link">
+            <div id="repo-card" class="repos__repo-card">
+              <h3 id="repo-name" class="repos__repo-name">
+                {{ repo.name }}
+              </h3>
+              <p id="repo-desc" class="repos__repo-desc">
+                {{ repo.description }}
+              </p>
+            </div>
+          </a>
         {% endfor %}
       {% else %}
-        <p>{{ dictionary.repos.error[locale] }}</p>
+        <p>
+          {{ dictionary.repos.error[locale] }}
+        </p>
       {% endif %}
     </div>
   </fieldset>
