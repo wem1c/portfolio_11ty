@@ -3,10 +3,6 @@
   --stack-gap: var(--space-l);
 }
 
-.repos__view-all {
-  color: var(--color-text, black);
-}
-
 .repos__grid {
   --grid-gap: var(--space-m);
   --grid-col-wmin: 45ch;
@@ -17,12 +13,14 @@
   text-decoration: none;
 }
 
-.repos__repo-link:hover > .repos__repo-card {
-  border-color: var(--color-accent);
+.repos__repo-link:hover .repos__repo-name,
+.repos__repo-link:focus .repos__repo-name {
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-normal);
 }
 
 .repos__repo-link:active > .repos__repo-card {
-  border-color: var(--color-accent);
+  background-color: var(--color-primary);
 }
 
 .repos__repo-card {
