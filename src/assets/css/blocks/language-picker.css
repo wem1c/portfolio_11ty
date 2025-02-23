@@ -1,29 +1,9 @@
 .language-picker {
-  width: 42px;
-  height: 42px;
-
   display: inline-flex;
-
   justify-content: center;
   align-items: center;
 
-  text-decoration: none;
-
-  transition-duration: 200ms;
-  transition-property: scale;
-  transition-timing-function: var(--easeOutCirc, ease-out);
-}
-
-.language-picker:hover {
-  scale: 1.2;
-}
-
-.language-picker:active {
-  scale: 1;
-}
-
-@media (prefers-reduced-motion) {
-  .language-picker {
-    transition: none;
-  }
+  width: 42px;
+  height: 42px;
+  align-self: center;
 }
