@@ -94,10 +94,10 @@
 }
 
 body {
+  color: var(--color-text);
   font-family: system-ui, sans-serif;
   font-size: var(--step-0);
 
-  color: var(--color-text);
   background-image: linear-gradient(
     180deg,
     var(--color-background) 0%,
@@ -113,15 +113,18 @@ body > :not(header, footer, hr) {
 }
 
 a:not([class]) {
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: var(--border-normal);
   text-underline-offset: 0.2em;
-
-  text-decoration-color: var(--color-accent);
-
-  transition: color 0.15s;
 }
 
-a:not([class]):hover {
-  color: var(--color-accent);
+a:not([class]):hover,
+a:not([class]):focus {
+  text-decoration-color: var(--color-text, black);
+}
+
+a:not([class]):active {
+  background-color: var(--color-primary);
 }
 
 a:not([class]):has(svg) {
@@ -129,10 +132,6 @@ a:not([class]):has(svg) {
   gap: 0.2em;
   align-items: center;
   vertical-align: text-bottom;
-}
-
-a:not([class]):has(svg) > svg {
-  color: var(--color-primary);
 }
 
 article {

@@ -1,16 +1,45 @@
 .header {
-  display: grid;
-  grid-auto-flow: column dense;
-  gap: var(--space-xs);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s) var(--space-xl);
+  justify-content: space-around;
 
-  align-items: center;
-  place-content: space-between;
+  container: header / inline-size;
 
+  border-bottom: var(--border-normal) solid var(--color-text, black);
   padding-block: var(--space-xs);
-
-  border-bottom: 0.125rem solid var(--color-text, black);
 }
 
-.header__link:hover > .logo {
-  color: color-mix(in oklab, var(--color-accent) 100%, white 40%);
+.header__autogram {
+  block-size: 100%;
+  min-block-size: 24px;
+  min-inline-size: 42px;
+
+  color: var(--color-text, black);
+  text-decoration: none;
+  font-family: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif",
+    "Sitka Small", serif;
+
+  border-top: var(--border-normal) solid transparent;
+
+  transition-duration: 100ms;
+  transition-timing-function: var(--easeOutCirc, ease-out);
+  transition-property: border-color, background-color;
+}
+
+.header__autogram:visited {
+  color: initial;
+}
+
+.header__autogram > h1 {
+  margin-block-start: 0;
+}
+
+.header__autogram:hover,
+.header__autogram:focus {
+  border-top-color: var(--color-text, black);
+}
+
+.header__autogram:active {
+  background-color: var(--color-primary);
 }

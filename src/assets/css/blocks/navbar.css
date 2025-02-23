@@ -2,33 +2,49 @@
   --cluster-gap: var(--space-3xs) var(--space-s);
 }
 
-.navbar > a {
-  min-inline-size: 48px;
-  min-block-size: 48px;
+.navbar__link {
+  block-size: 100%;
+  min-block-size: 24px;
+  min-inline-size: 42px;
 
   padding-inline: 0.2rem;
 
-  text-decoration: none;
+  color: var(--color-text);
+  text-decoration: overline var(--border-normal) transparent;
+  text-transform: uppercase;
+  font-weight: 600;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  transition: color 150ms ease-out;
+  transition-property: text-decoration-color, background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
 }
 
-.navbar > a:hover {
-  color: var(--color-accent);
+.navbar__link:visited {
+  color: initial;
 }
 
-.navbar > a:active {
-  color: var(--color-text);
+.navbar__link:hover,
+.navbar__link:focus {
+  text-decoration-color: var(--color-text);
 }
 
-.navbar > a[data-state="active"] {
-  text-decoration: overline;
+.navbar__link:active {
+  background-color: var(--color-primary);
+}
 
-  color: color-mix(in oklab, var(--color-text) 100%, white 100%);
+.navbar__link[data-state="active"] {
+  color: var(--color-text-light);
+  text-decoration-color: var(--color-text-light);
 
   pointer-events: none;
+}
+
+@container header ( 26.75em <= width <= 34.3em) {
+  .navbar {
+    order: 3;
+  }
 }
