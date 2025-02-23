@@ -139,6 +139,8 @@ Conor C. Peterson - [@wemic@social.linux.pizza](https://social.linux.pizza/@wemi
 - [Animated Pride Flags - Josh W Comeau](https://www.joshwcomeau.com/animation/pride-flags/)
 - [11tybundle.dev](https://11tybundle.dev/) - amazing 11ty knowledge base
 - [Choose an open source license](https://choosealicense.com/)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [Modern Font Stacks](https://modernfontstacks.com/)
 
 ### Inspirations
 
