@@ -25,7 +25,7 @@
   padding: 0.25em 0.5em;
 }
 
-.tech__item:hover {
+.tech__item:hover,
+.tech__item:focus {
   background-color: var(--color-background);
-  border-color: var(--color-accent);
 }
