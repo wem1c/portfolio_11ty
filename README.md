@@ -147,6 +147,7 @@ These sites and the amazing people that made 'em!
 - [The Ideal Viewport Doesn't Exist](https://viewports.fyi/)
 - [Build Excellent Websites](https://buildexcellentwebsit.es/)
 - [wonderfulfrog.com](https://wonderfulfrog.com/)
+- [Nobl](https://nobl.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
