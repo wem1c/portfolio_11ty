@@ -28,7 +28,3 @@
   line-height: 0;
   list-style-type: none;
 }
-
-.footer__social:hover {
-  --button-text: var(--color-accent);
-}
