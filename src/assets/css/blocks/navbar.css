@@ -43,7 +43,7 @@
   pointer-events: none;
 }
 
-@container header ( 26.75em <= width <= 34.3em) {
+@container header ( 26.75em <= width <= 35em) {
   .navbar {
     order: 3;
   }

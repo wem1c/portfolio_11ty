@@ -33,6 +33,8 @@
 
 .header__autogram > h1 {
   margin-block-start: 0;
+
+  font-weight: normal;
 }
 
 .header__autogram:hover,
